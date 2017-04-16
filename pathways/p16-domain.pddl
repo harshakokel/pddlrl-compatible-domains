@@ -2,7 +2,7 @@
 ; Authors: Yannis Dimopoulos, Alfonso Gerevini and Alessandro Saetti
 
 (define (domain Pathways-Propositional) 
-(:requirements :typing :adl)  
+(:requirements :typing)  
 
 (:types level molecule - object
         simple complex - molecule) 
