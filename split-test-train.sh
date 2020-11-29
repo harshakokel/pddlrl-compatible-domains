@@ -6,8 +6,9 @@ parallel "mkdir -p {}/train {}/test" ::: $(ls -d */)
 
 move_per_dir (){
     domain=${1%%/}
-    ls $domain/p*.pddl | split -n r/2 --additional-suffix $domain
-    trap "rm xaa$domain xab$domain" RETURN
+    trap "rm -f xaa$domain xab$domain tmp$domain" RETURN
+    ls $domain/p*.pddl > tmp$domain
+    split -n 2 --additional-suffix $domain tmp$domain
     parallel "mv {} {//}/train/{/}" :::: xaa$domain
     parallel "mv {} {//}/test/{/}" :::: xab$domain
 }
