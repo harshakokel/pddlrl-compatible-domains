@@ -103,5 +103,4 @@
     (prop_host id_bbrat id_rhost)
 )
 )
-(:metric minimize (total-cost))
 )

@@ -158,5 +158,4 @@
     (prop_host id_ckrat id_ghost)
 )
 )
-(:metric minimize (total-cost))
 )

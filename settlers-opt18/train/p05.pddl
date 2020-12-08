@@ -463,5 +463,4 @@
     (connected-by-rail p2 p0)
 )
 )
-(:metric minimize (total-cost))
 )

@@ -423,5 +423,4 @@
     (housing p1 hl1)
 )
 )
-(:metric minimize (total-cost))
 )

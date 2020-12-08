@@ -285,5 +285,4 @@
     (prop_host id_dnrat id_cshost)
 )
 )
-(:metric minimize (total-cost))
 )

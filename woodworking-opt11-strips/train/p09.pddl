@@ -139,5 +139,4 @@
       (wood p6 mahogany)
     )
   )
-  (:metric minimize (total-cost))
 )

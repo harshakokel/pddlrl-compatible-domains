@@ -44,5 +44,4 @@ road0 road1 road2 road3 - road
 (arrived car5 junction1-0)
 )
 )
-(:metric minimize (total-cost))
 )

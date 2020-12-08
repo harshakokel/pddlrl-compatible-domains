@@ -127,5 +127,4 @@
     (prop_host id_birat id_zhost)
 )
 )
-(:metric minimize (total-cost))
 )

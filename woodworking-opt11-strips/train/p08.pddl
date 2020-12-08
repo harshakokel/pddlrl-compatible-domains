@@ -137,5 +137,4 @@
       (surface-condition p6 verysmooth)
     )
   )
-  (:metric minimize (total-cost))
 )

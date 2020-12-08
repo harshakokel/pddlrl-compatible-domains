@@ -29,5 +29,4 @@
     (on car-out-1a seg-in-1b)
     (on car-out-1b seg-out-1a)
   ))
-  (:metric minimize (total-cost))
 )

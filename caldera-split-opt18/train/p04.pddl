@@ -129,5 +129,4 @@
     (prop_host id_bnrat id_zhost)
 )
 )
-(:metric minimize (total-cost))
 )

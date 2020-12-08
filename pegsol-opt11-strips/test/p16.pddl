@@ -231,5 +231,4 @@
         (occupied pos-3-3)
            )
     )
-    (:metric minimize (total-cost))
 )

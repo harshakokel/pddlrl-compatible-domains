@@ -131,5 +131,4 @@
     (prop_host id_bprat id_zhost)
 )
 )
-(:metric minimize (total-cost))
 )

@@ -138,5 +138,4 @@
       (treatment p6 glazed)
     )
   )
-  (:metric minimize (total-cost))
 )

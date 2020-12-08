@@ -201,5 +201,4 @@
     (painted tile_6-4 white)
     (painted tile_6-5 black)
 ))
- (:metric minimize (total-cost))
 )

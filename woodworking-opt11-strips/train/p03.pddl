@@ -108,5 +108,4 @@
       (treatment p4 varnished)
     )
   )
-  (:metric minimize (total-cost))
 )

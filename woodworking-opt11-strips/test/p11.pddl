@@ -147,5 +147,4 @@
       (treatment p7 varnished)
     )
   )
-  (:metric minimize (total-cost))
 )

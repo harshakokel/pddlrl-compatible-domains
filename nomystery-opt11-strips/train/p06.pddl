@@ -29492,4 +29492,3 @@ level0 level1 level2 level3 level4 level5 level6 level7 level8 level9 level10 le
 (at p7 l3)
 )
 )
-(:metric minimize (total-cost)))

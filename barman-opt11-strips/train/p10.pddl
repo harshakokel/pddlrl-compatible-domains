@@ -60,4 +60,3 @@
      (contains shot4 cocktail2)
      (contains shot5 cocktail3)
 ))
-(:metric minimize (total-cost)))

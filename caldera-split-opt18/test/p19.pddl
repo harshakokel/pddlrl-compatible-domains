@@ -207,5 +207,4 @@
     (prop_host id_chrat id_yhost)
 )
 )
-(:metric minimize (total-cost))
 )

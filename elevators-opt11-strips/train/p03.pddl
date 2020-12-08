@@ -72,6 +72,5 @@ slow0-0 slow1-0 - slow-elevator
 (passenger-at p2 n8)
 ))
 
-(:metric minimize (total-cost))
 
 )

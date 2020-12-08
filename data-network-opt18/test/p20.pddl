@@ -477,5 +477,4 @@
     (saved data-2-7 server1)
 )
 )
-(:metric minimize (total-cost))
 )

@@ -233,5 +233,4 @@
     (prop_host id_cwrat id_bihost)
 )
 )
-(:metric minimize (total-cost))
 )

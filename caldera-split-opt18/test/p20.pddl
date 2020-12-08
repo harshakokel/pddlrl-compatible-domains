@@ -182,5 +182,4 @@
     (prop_host id_cqrat id_nhost)
 )
 )
-(:metric minimize (total-cost))
 )

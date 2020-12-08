@@ -103,5 +103,4 @@
       (treatment p3 glazed)
     )
   )
-  (:metric minimize (total-cost))
 )

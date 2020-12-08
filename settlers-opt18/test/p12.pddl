@@ -415,5 +415,4 @@
     (has-coal-stack p0)
 )
 )
-(:metric minimize (total-cost))
 )

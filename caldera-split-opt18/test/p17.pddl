@@ -331,5 +331,4 @@
     (prop_host id_earat id_cmhost)
 )
 )
-(:metric minimize (total-cost))
 )

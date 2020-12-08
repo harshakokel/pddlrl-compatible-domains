@@ -381,5 +381,4 @@
     (has-sawmill p1)
 )
 )
-(:metric minimize (total-cost))
 )

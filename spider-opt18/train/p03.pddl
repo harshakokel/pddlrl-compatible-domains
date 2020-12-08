@@ -230,5 +230,4 @@
     (on card-d0-s3-v4 discard)
 )
 )
-(:metric minimize (total-cost))
 )

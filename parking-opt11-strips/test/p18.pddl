@@ -73,7 +73,6 @@
       (at-curb-num car_10 curb_10)
     )
   )
-(:metric minimize (total-cost))
 )
 ; =========== INIT =========== 
 ;  curb_00: car_10 car_02 

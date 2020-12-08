@@ -126,5 +126,4 @@
       (treatment p5 glazed)
     )
   )
-  (:metric minimize (total-cost))
 )

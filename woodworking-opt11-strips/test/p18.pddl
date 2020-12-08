@@ -165,5 +165,4 @@
       (surface-condition p9 smooth)
     )
   )
-  (:metric minimize (total-cost))
 )

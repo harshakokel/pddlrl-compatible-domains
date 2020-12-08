@@ -64,5 +64,4 @@
     (on car-out-3 seg-out-3)
     (on car-out-4 seg-out-4)
   ))
-  (:metric minimize (total-cost))
 )

@@ -184,5 +184,4 @@
     (prop_host id_cfrat id_bhhost)
 )
 )
-(:metric minimize (total-cost))
 )

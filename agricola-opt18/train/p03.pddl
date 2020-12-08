@@ -275,5 +275,4 @@
     (harvest_phase stage3 harvest_end)
 )
 )
-(:metric minimize (total-cost))
 )

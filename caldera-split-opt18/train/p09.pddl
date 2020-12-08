@@ -210,5 +210,4 @@
     (prop_host id_cmrat id_whost)
 )
 )
-(:metric minimize (total-cost))
 )

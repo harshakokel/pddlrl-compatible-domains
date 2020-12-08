@@ -156,5 +156,4 @@
     (on card-d1-s1-v2 discard)
 )
 )
-(:metric minimize (total-cost))
 )

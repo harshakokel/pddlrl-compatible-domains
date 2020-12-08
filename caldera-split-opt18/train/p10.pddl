@@ -134,5 +134,4 @@
     (prop_host id_burat id_ghost)
 )
 )
-(:metric minimize (total-cost))
 )

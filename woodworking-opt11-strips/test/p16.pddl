@@ -169,5 +169,4 @@
       (surface-condition p8 smooth)
     )
   )
-  (:metric minimize (total-cost))
 )

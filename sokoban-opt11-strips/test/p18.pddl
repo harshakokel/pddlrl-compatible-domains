@@ -337,5 +337,4 @@
     (at-goal stone-10)
     (at-goal stone-11)
   ))
-  (:metric minimize (total-cost))
 )

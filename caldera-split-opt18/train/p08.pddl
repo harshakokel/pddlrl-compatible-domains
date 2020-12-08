@@ -175,5 +175,4 @@
     (prop_host id_bxrat id_bahost)
 )
 )
-(:metric minimize (total-cost))
 )

@@ -208,5 +208,4 @@
     (prop_host id_cvrat id_bqhost)
 )
 )
-(:metric minimize (total-cost))
 )

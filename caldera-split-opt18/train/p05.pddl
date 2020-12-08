@@ -369,5 +369,4 @@
     (prop_host id_ejrat id_dshost)
 )
 )
-(:metric minimize (total-cost))
 )

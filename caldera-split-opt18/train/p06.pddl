@@ -303,5 +303,4 @@
     (prop_host id_djrat id_cnhost)
 )
 )
-(:metric minimize (total-cost))
 )
