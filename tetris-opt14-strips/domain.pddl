@@ -16,7 +16,7 @@
     (at_right_l ?element - right_l ?xy - position ?xy2 - position ?xy3 - position)
 
   )
-(:functions (total-cost) - number)
+
 
 ;; move a 1 square piece
 (:action move_square
@@ -32,7 +32,7 @@
 		(at_square ?element ?xy_final)
 		(not (clear ?xy_final))
 		(not (at_square ?element ?xy_initial) )
-                (increase (total-cost) 1)
+                
 		)
 )
 
@@ -50,7 +50,7 @@
 		(at_two ?element ?xy_initial2 ?xy_final)
 		(not (clear ?xy_final))
 		(not (at_two ?element ?xy_initial1 ?xy_initial2) )
-                (increase (total-cost) 2)
+                
 		)
 )
 
@@ -77,7 +77,7 @@
 		(not (clear ?xy_final))
 		(not (clear ?xy_final2))
 		(not (at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3))
-                (increase (total-cost) 3)
+                
 		)
 )
 
@@ -100,7 +100,7 @@
 		(not (clear ?xy_final))
 		(not (clear ?xy_final2))
 		(not (at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3))
-                (increase (total-cost) 3)
+                
 		)
 )
 
@@ -127,7 +127,7 @@
 		(not (clear ?xy_final))
 		(not (clear ?xy_final2))
 		(not (at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3))
-                (increase (total-cost) 3)
+                
 		)
 )
 
@@ -150,7 +150,7 @@
 		(not (clear ?xy_final))
 		(not (clear ?xy_final2))
 		(not (at_right_l ?element ?xy_initial1 ?xy_initial2 ?xy_initial3))
-	        (increase (total-cost) 3)
+	        
 		)
 )
 

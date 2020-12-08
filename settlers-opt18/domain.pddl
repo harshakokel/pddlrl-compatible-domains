@@ -79,9 +79,7 @@
     (DEL-ATLEAST-WOOD ?r_old - wood_level ?r_consumed - wood_atleastlevel ?al - wood_atleastlevel)
     (DEL-ATLEAST-IRON ?r_old - iron_level ?r_consumed - iron_atleastlevel ?al - iron_atleastlevel)
 )
-(:functions
-    (total-cost) - number
-)
+
 ;; A.1: Loading and unloading.
 ; resource[place] -= 1, resource[vehicle] += 1, space[vehicle] -= 1\
 (:action load-stone
@@ -157,7 +155,7 @@
                 (not (has-space ?v))
             )
         )
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -234,7 +232,7 @@
                 (not (has-space ?v))
             )
         )
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -311,7 +309,7 @@
                 (not (has-space ?v))
             )
         )
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -388,7 +386,7 @@
                 (not (has-space ?v))
             )
         )
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -465,7 +463,7 @@
                 (not (has-space ?v))
             )
         )
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -542,7 +540,7 @@
                 (not (has-space ?v))
             )
         )
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -611,7 +609,7 @@
             )
         )
         (has-space ?v)
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -679,7 +677,7 @@
             )
         )
         (has-space ?v)
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -747,7 +745,7 @@
             )
         )
         (has-space ?v)
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -815,7 +813,7 @@
             )
         )
         (has-space ?v)
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -883,7 +881,7 @@
             )
         )
         (has-space ?v)
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -951,7 +949,7 @@
             )
         )
         (has-space ?v)
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -970,7 +968,7 @@
     (and
         (not (is-at ?v ?p1))
         (is-at ?v ?p2)
-        (increase (total-cost) 10)
+        
     )
 )
 
@@ -1023,7 +1021,7 @@
             )
         )
         (has-space ?v)
-        (increase (total-cost) 10)
+        
     )
 )
 
@@ -1076,7 +1074,7 @@
             )
         )
         (has-space ?v)
-        (increase (total-cost) 20)
+        
     )
 )
 
@@ -1113,7 +1111,7 @@
                 (not (available-atleast-timber ?p ?al))
             )
         )
-        (increase (total-cost) 10)
+        
     )
 )
 
@@ -1149,7 +1147,7 @@
                 (not (available-atleast-timber ?p ?al))
             )
         )
-        (increase (total-cost) 10)
+        
     )
 )
 
@@ -1208,7 +1206,7 @@
                 (not (available-atleast-wood ?p ?al))
             )
         )
-        (increase (total-cost) 15)
+        
     )
 )
 
@@ -1268,7 +1266,7 @@
                 (not (available-atleast-stone ?p ?al))
             )
         )
-        (increase (total-cost) 10)
+        
     )
 )
 
@@ -1328,7 +1326,7 @@
                 (not (available-atleast-stone ?p ?al))
             )
         )
-        (increase (total-cost) 10)
+        
     )
 )
 
@@ -1388,7 +1386,7 @@
                 (not (available-atleast-iron ?p1 ?al))
             )
         )
-        (increase (total-cost) 10)
+        
     )
 )
 
@@ -1498,7 +1496,7 @@
         (not (potential ?v))
         (space-in ?v spl1)
         (has-space ?v)
-        (increase (total-cost) 5)
+        
     )
 )
 
@@ -1538,7 +1536,7 @@
         (not (potential ?v))
         (space-in ?v spl5)
         (has-space ?v)
-        (increase (total-cost) 10)
+        
     )
 )
 
@@ -1579,7 +1577,7 @@
         (not (potential ?v))
         (space-in ?v spl10)
         (has-space ?v)
-        (increase (total-cost) 15)
+        
     )
 )
 
@@ -1637,7 +1635,7 @@
                 (available-atleast-coal ?p ?al)
             )
         )
-        (increase (total-cost) 10)
+        
     )
 )
 
@@ -1773,7 +1771,7 @@
                 (available-atleast-iron ?p ?al)
             )
         )
-        (increase (total-cost) 20)
+        
     )
 )
 

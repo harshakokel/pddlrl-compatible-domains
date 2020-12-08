@@ -32,12 +32,7 @@
     (cached ?d - data ?s - server)
     (usage ?s - server ?n - numbers)
 )
-(:functions
-    (total-cost) - number
-    (process-cost ?sc - script ?s - server) - number
-    (send-cost ?from ?to - server ?size - numbers) - number
-    (io-cost ?s - server ?size - numbers) - number
-)
+
 ;; Release data from RAM.
 (:action release
     :parameters (?d - data ?s - server ?size ?before ?after - numbers)
@@ -53,7 +48,7 @@
         (not (cached ?d ?s))
         (not (usage ?s ?before))
         (usage ?s ?after)
-        (increase (total-cost) 0)
+        
     )
 )
 
@@ -68,7 +63,7 @@
     :effect
     (and
         (saved ?d ?s)
-        (increase (total-cost) (io-cost ?s ?size))
+        
     )
 )
 
@@ -90,7 +85,7 @@
         (cached ?d ?s)
         (not (usage ?s ?before))
         (usage ?s ?after)
-        (increase (total-cost) (io-cost ?s ?size))
+        
     )
 )
 
@@ -113,7 +108,7 @@
         (cached ?d ?to)
         (not (usage ?to ?before))
         (usage ?to ?after)
-        (increase (total-cost) (send-cost ?from ?to ?size))
+        
     )
 )
 
@@ -137,7 +132,7 @@
         (cached ?out ?s)
         (not (usage ?s ?before))
         (usage ?s ?after)
-        (increase (total-cost) (process-cost ?sc ?s))
+        
     )
 )
 

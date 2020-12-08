@@ -122,9 +122,7 @@
     (ARG_10 ?x - object)
     (arg_11 ?x - object)
 )
-(:functions
-    (total-cost) - number
-)
+
 (:action get_domain_1
     :parameters (?v00 - observedrat ?v01 - observedhost ?v02 - string)
     :precondition
@@ -139,7 +137,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 6)
+        
         (forall (?x4 - observeddomain)
             (when
                 (PROP_DOMAIN ?v01 ?x4)
@@ -166,7 +164,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 6)
+        
         (forall (?x3 - observedhost)
             (when
                 (PROP_DOMAIN ?x3 ?v02)
@@ -193,7 +191,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 6)
+        
         (forall (?x4 - observeddomainuser)
             (when
                 (MEM_DOMAIN_USER_ADMINS ?v01 ?x4)
@@ -223,7 +221,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 6)
+        
         (forall (?x4 - observeddomaincredential ?x5 - observeddomainuser)
             (when
                 (and
@@ -263,7 +261,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 2)
+        
         (not (procnone))
         (do_5_2)
         (arg_7 ?v06)
@@ -287,7 +285,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (do_5_3)
         (not (do_5_2))
         (arg_1 ?v00)
@@ -310,7 +308,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (do_5_4)
         (not (do_5_3))
         (arg_2 ?v01)
@@ -333,7 +331,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (do_5_5)
         (not (do_5_4))
         (not (arg_1 ?v00))
@@ -352,7 +350,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (when
             (MEM_DOMAIN_USER_ADMINS ?v02 ?v06)
             (and
@@ -390,7 +388,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 2)
+        
         (not (procnone))
         (do_6_2)
         (arg_1 ?v00)
@@ -414,7 +412,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (do_6_3)
         (not (do_6_2))
         (arg_4 ?v03)
@@ -434,7 +432,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (do_6_4)
         (not (do_6_3))
         (not (arg_2 ?v01))
@@ -455,7 +453,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (do_6_5)
         (not (do_6_4))
         (not (arg_4 ?v03))
@@ -473,7 +471,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (when
             (prop_elevated ?v00 yes)
             (and
@@ -503,7 +501,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 6)
+        
         (knows ?v02)
         (knows_property ?v01 ptimedelta)
         (prop_host ?v02 ?v01)
@@ -525,7 +523,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (not (procnone))
         (do_8_2)
         (arg_1 ?v00)
@@ -551,7 +549,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (do_8_3)
         (not (do_8_2))
         (not (arg_4 ?v03))
@@ -575,7 +573,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (do_8_4)
         (not (do_8_3))
         (not (arg_8 ?v08))
@@ -600,7 +598,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (do_8_5)
         (not (do_8_4))
         (arg_2 ?v01)
@@ -620,7 +618,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (do_8_6)
         (not (do_8_5))
         (not (arg_1 ?v00))
@@ -640,7 +638,7 @@
     )
     :effect
     (and
-        (increase (total-cost) 1)
+        
         (when
             (MEM_DOMAIN_USER_ADMINS ?v02 ?v07)
             (and

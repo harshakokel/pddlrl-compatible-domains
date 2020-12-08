@@ -36,11 +36,7 @@
             (grind-treatment-change ?old ?new - treatmentstatus)
             (is-smooth ?surface - surface))
       
-  (:functions (total-cost) - number
-            (spray-varnish-cost ?obj - part) - number
-            (glaze-cost ?obj - part) - number
-            (grind-cost ?obj - part) - number
-            (plane-cost ?obj - part) - number)
+  
 
   (:action do-immersion-varnish
     :parameters (?x - part ?m - immersion-varnisher 
@@ -52,7 +48,7 @@
             (is-smooth ?surface)
             (treatment ?x untreated))
     :effect (and
-            (increase (total-cost) 10)
+            
             (not (treatment ?x untreated))
             (treatment ?x varnished)
             (not (colour ?x natural))
@@ -68,7 +64,7 @@
             (is-smooth ?surface)
             (treatment ?x untreated))
     :effect (and 
-            (increase (total-cost) (spray-varnish-cost ?x))
+            
             (not (treatment ?x untreated))
             (treatment ?x varnished)
             (not (colour ?x natural))
@@ -82,7 +78,7 @@
             (has-colour ?m ?newcolour)
             (treatment ?x untreated))
     :effect (and 
-            (increase (total-cost) (glaze-cost ?x))
+            
             (not (treatment ?x untreated))
             (treatment ?x glazed)
             (not (colour ?x natural))
@@ -100,7 +96,7 @@
             (treatment ?x ?oldtreatment)
             (grind-treatment-change ?oldtreatment ?newtreatment))
     :effect (and
-            (increase (total-cost) (grind-cost ?x))
+            
             (not (surface-condition ?x ?oldsurface))
             (surface-condition ?x verysmooth)
             (not (treatment ?x ?oldtreatment))
@@ -117,7 +113,7 @@
             (treatment ?x ?oldtreatment)
             (colour ?x ?oldcolour))
     :effect (and
-            (increase (total-cost) (plane-cost ?x))
+            
             (not (surface-condition ?x ?oldsurface))
             (surface-condition ?x smooth)
             (not (treatment ?x ?oldtreatment))
@@ -131,7 +127,7 @@
             (empty ?m)
             (available ?b))
     :effect (and
-            (increase (total-cost) 30)
+            
             (not (available ?b))
             (not (empty ?m))
             (in-highspeed-saw ?b ?m)))
@@ -140,7 +136,7 @@
     :parameters (?b - board ?m - highspeed-saw)
     :precondition (in-highspeed-saw ?b ?m)
     :effect (and
-            (increase (total-cost) 10)
+            
             (available ?b)
             (not (in-highspeed-saw ?b ?m))
             (empty ?m)))
@@ -157,7 +153,7 @@
             (boardsize ?b ?size_before)
             (boardsize-successor ?size_after ?size_before))
     :effect (and
-            (increase (total-cost) 10)
+            
             (not (unused ?p))
             (available ?p)
             (wood ?p ?w)
@@ -180,7 +176,7 @@
             (boardsize-successor ?size_after ?s1)
             (boardsize-successor ?s1 ?size_before))
     :effect (and
-            (increase (total-cost) 10)
+            
             (not (unused ?p))
             (available ?p)
             (wood ?p ?w)
@@ -204,7 +200,7 @@
             (boardsize-successor ?s1 ?s2)
             (boardsize-successor ?s2 ?size_before))
     :effect (and
-            (increase (total-cost) 10)
+            
             (not (unused ?p))
             (available ?p)
             (wood ?p ?w)
@@ -225,7 +221,7 @@
             (boardsize ?b ?size_before)
             (boardsize-successor ?size_after ?size_before))
     :effect (and
-            (increase (total-cost) 30)
+            
             (not (unused ?p))
             (available ?p)
             (wood ?p ?w)
@@ -248,7 +244,7 @@
             (boardsize-successor ?size_after ?s1)
             (boardsize-successor ?s1 ?size_before))
     :effect (and
-            (increase (total-cost) 30)
+            
             (not (unused ?p))
             (available ?p)
             (wood ?p ?w)
@@ -272,7 +268,7 @@
             (boardsize-successor ?s1 ?s2)
             (boardsize-successor ?s2 ?size_before))
     :effect (and
-            (increase (total-cost) 30)
+            
             (not (unused ?p))
             (available ?p)
             (wood ?p ?w)

@@ -61,10 +61,7 @@
     (ok)
     (home_improvement ?imp - improvement)
 )
-(:functions
-    (total-cost) - number
-    (group_worker_cost ?w - worker) - number
-)
+ni
 (:action ag__harvest_collect_end
     :parameters (?r - round ?s - stage)
     :precondition
@@ -77,7 +74,7 @@
     (and
         (not (harvest_phase ?s harvest_init))
         (harvest_phase ?s harvest_feeding)
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -100,7 +97,7 @@
         (num_food ?i3)
         (not (sown_veg ?v))
         (not (can_harvest ?v))
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -125,7 +122,7 @@
         (num_food ?i3)
         (not (sown_veg ?v))
         (not (can_harvest ?v))
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -147,7 +144,7 @@
         (harvest_phase ?s harvest_breeding)
         (not (num_food ?inow))
         (num_food ?irest)
-        (increase (total-cost) 1)
+        
         (can_breed sheep)
         (can_breed boar)
         (can_breed cattle)
@@ -171,7 +168,7 @@
         (not (num_food ?i))
         (num_food ?i2)
         (not (can_breed ?a))
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -187,7 +184,7 @@
     (and
         (not (harvest_phase ?s harvest_breeding))
         (harvest_phase ?s harvest_end)
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -206,7 +203,7 @@
         (current_worker ?maxw)
         (not (current_round ?r))
         (hold_round ?r backhome)
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -229,7 +226,7 @@
         (not (current_round ?r))
         (not (newborn))
         (hold_round ?r backhome)
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -259,7 +256,7 @@
         (available_action act_improve)
         (can_harvest grain)
         (can_harvest carrot)
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -277,7 +274,7 @@
         (not (hold_round ?r1 roundend))
         (current_round ?r2)
         (open_action ?act)
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -301,7 +298,7 @@
         (current_stage ?s2)
         (harvest_phase ?s2 harvest_init)
         (open_action ?act)
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -327,7 +324,7 @@
         (current_worker ?w2)
         (not (num_food ?i1))
         (num_food ?i2)
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 
@@ -348,7 +345,7 @@
         (plowed_fields)
         (not (current_worker ?w1))
         (current_worker ?w2)
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 
@@ -368,7 +365,7 @@
         (stored_veg ?v)
         (not (current_worker ?w1))
         (current_worker ?w2)
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 
@@ -389,7 +386,7 @@
         (not (current_worker ?w1))
         (current_worker ?w2)
         (fences_for ?a)
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 
@@ -412,7 +409,7 @@
         (not (current_worker ?w1))
         (current_worker ?w2)
         (owned_animals ?a)
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 
@@ -439,7 +436,7 @@
         (not (num_food ?i1))
         (num_food ?i2)
         (ok)
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 
@@ -461,7 +458,7 @@
         (not (current_worker ?w1))
         (current_worker ?w2)
         (stored_resource ?res)
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 
@@ -489,7 +486,7 @@
         (built_rooms ?room ?wnewmax)
         (not (stored_resource wood))
         (not (stored_resource reed))
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 
@@ -514,7 +511,7 @@
         (home_improvement ?imp)
         (not (stored_resource clay))
         (not (stored_resource stone))
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 
@@ -537,7 +534,7 @@
         (not (current_worker ?w1))
         (current_worker ?w2)
         (newborn)
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 
@@ -561,7 +558,7 @@
         (sown_veg ?v)
         (not (current_worker ?w1))
         (current_worker ?w2)
-        (increase (total-cost) (group_worker_cost ?wmax))
+        
     )
 )
 

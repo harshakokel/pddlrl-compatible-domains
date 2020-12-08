@@ -17,10 +17,7 @@
      (capacity-predecessor ?s1 ?s2 - capacity-number)
   )
 
-  (:functions
-     (road-length ?l1 ?l2 - location) - number
-     (total-cost) - number
-  )
+  
 
   (:action drive
     :parameters (?v - vehicle ?l1 ?l2 - location)
@@ -31,7 +28,7 @@
     :effect (and
         (not (at ?v ?l1))
         (at ?v ?l2)
-        (increase (total-cost) (road-length ?l1 ?l2))
+        
       )
   )
 
@@ -48,7 +45,7 @@
         (in ?p ?v)
         (capacity ?v ?s1)
         (not (capacity ?v ?s2))
-        (increase (total-cost) 1)
+        
       )
   )
 
@@ -65,7 +62,7 @@
         (at ?p ?l)
         (capacity ?v ?s2)
         (not (capacity ?v ?s1))
-        (increase (total-cost) 1)
+        
       )
   )
 

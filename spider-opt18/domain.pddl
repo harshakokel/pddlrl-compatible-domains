@@ -49,9 +49,7 @@
     (currently-updating-part-of-tableau)
     (make-part-of-tableau ?c - card ?t - tableau)
 )
-(:functions
-    (total-cost) - number
-)
+
 (:action start-dealing
     :parameters ()
     :precondition
@@ -65,7 +63,7 @@
     :effect
     (and
         (currently-dealing)
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -164,7 +162,7 @@
         )
         (currently-updating-part-of-tableau)
         (make-part-of-tableau ?c ?totableau)
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -197,7 +195,7 @@
         )
         (currently-updating-part-of-tableau)
         (make-part-of-tableau ?c ?to)
-        (increase (total-cost) 1)
+        
     )
 )
 
@@ -371,7 +369,7 @@
     (and
         (currently-collecting-deck)
         (collect-card ?c)
-        (increase (total-cost) 1)
+        
     )
 )
 

@@ -61,9 +61,7 @@
    (s-last ?x)
    )
 
-  (:functions
-   (total-cost)
-   )
+  
 
   ;; Cutting.
   ;; A cutting operation is a sequence of actions of the form
@@ -134,7 +132,7 @@
 		(splicing)
 		(splice-point-1 ?x)
 		(splice-point-2 ?y)
-		(increase (total-cost) 2))
+		)
    )
 
   (:action continue-splice-1
@@ -204,7 +202,7 @@
 		(inverse-splicing)
 		(splice-point-1 ?x)
 		(splice-point-2 ?y)
-		(increase (total-cost) 2))
+		)
    )
 
   (:action begin-inverse-splice
@@ -218,7 +216,7 @@
 		(inverse-splicing)
 		(splice-point-1 ?x)
 		(splice-point-2 ?y)
-		(increase (total-cost) 1))
+		)
    )
 
   ;; special case: the genome consists of one single gene (i.e., all
@@ -234,7 +232,7 @@
 		(inverse-splicing)
 		(splice-point-1 ?x)
 		(splice-point-2 ?x)
-		(increase (total-cost) 1))
+		)
    )
 
   (:action continue-inverse-splice-1A
@@ -334,7 +332,7 @@
 		      (normal ?x))
    :effect (and (not (normal ?x))
 		(inverted ?x)
-		(increase (total-cost) 1))
+		)
    )
 
   (:action invert-single-gene-B
@@ -343,7 +341,7 @@
 		      (inverted ?x))
    :effect (and (not (inverted ?x))
 		(normal ?x)
-		(increase (total-cost) 1))
+		)
    )
 
   ;; The reset action must follow every complete edit operation sequence.

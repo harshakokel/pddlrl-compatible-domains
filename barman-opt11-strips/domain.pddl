@@ -19,7 +19,7 @@
                 (cocktail-part1 ?c - cocktail ?i - ingredient)
                 (cocktail-part2 ?c - cocktail ?i - ingredient))
 
-(:functions (total-cost) - number)
+
 		
   (:action grasp
              :parameters (?h - hand ?c - container)
@@ -27,7 +27,7 @@
              :effect (and (not (ontable ?c))
 	     	     	  (not (handempty ?h))
 			  (holding ?h ?c)
-			  (increase (total-cost) 1)))
+			  ))
 
   (:action leave
              :parameters (?h - hand ?c - container)
@@ -35,7 +35,7 @@
              :effect (and (not (holding ?h ?c))
 	     	     	  (handempty ?h)
 			  (ontable ?c)
-			  (increase (total-cost) 1)))
+			  ))
   
   (:action fill-shot
            :parameters (?s - shot ?i - ingredient ?h1 ?h2 - hand ?d - dispenser)
@@ -48,7 +48,7 @@
 	   	   	(contains ?s ?i)
 	   	   	(not (clean ?s))
 			(used ?s ?i)
-			(increase (total-cost) 10)))
+			))
 
 
   (:action refill-shot
@@ -60,7 +60,7 @@
 			      (used ?s ?i))
            :effect (and (not (empty ?s))
                         (contains ?s ?i)
-			(increase (total-cost) 10)))
+			))
 
   (:action empty-shot
            :parameters (?h - hand ?p - shot ?b - beverage)
@@ -68,7 +68,7 @@
                               (contains ?p ?b))
            :effect (and (not (contains ?p ?b))
 	   	   	(empty ?p)
-			(increase (total-cost) 1)))
+			))
 
   (:action clean-shot
   	   :parameters (?s - shot ?b - beverage ?h1 ?h2 - hand)
@@ -78,7 +78,7 @@
                               (used ?s ?b))
            :effect (and (not (used ?s ?b))
 	   	   	(clean ?s)
-			(increase (total-cost) 1)))
+			))
 
   (:action pour-shot-to-clean-shaker
            :parameters (?s - shot ?i - ingredient ?d - shaker ?h1 - hand ?l ?l1 - level)
@@ -96,7 +96,7 @@
 			(unshaked ?d)
 			(not (shaker-level ?d ?l))
 			(shaker-level ?d ?l1)
-			(increase (total-cost) 1)))
+			))
 
 
   (:action pour-shot-to-used-shaker
@@ -111,7 +111,7 @@
 	   	   	(empty ?s)     
   			(not (shaker-level ?d ?l))
 			(shaker-level ?d ?l1)
-			(increase (total-cost) 1)))
+			))
 
   (:action empty-shaker
            :parameters (?h - hand ?s - shaker ?b - cocktail ?l ?l1 - level)
@@ -125,7 +125,7 @@
 	   	   	(shaker-level ?s ?l1)
 			(not (contains ?s ?b))
 	   	   	(empty ?s)
-			(increase (total-cost) 1)))
+			))
 
   (:action clean-shaker
   	   :parameters (?h1 ?h2 - hand ?s - shaker)
@@ -133,7 +133,7 @@
                               (handempty ?h2)
                               (empty ?s))
            :effect (and (clean ?s)
-			(increase (total-cost) 1)))
+			))
   
   (:action shake
   	   :parameters (?b - cocktail ?d1 ?d2 - ingredient ?s - shaker ?h1 ?h2 - hand)
@@ -149,7 +149,7 @@
                         (not (contains ?s ?d2))
 	   	   	(shaked ?s)
                         (contains ?s ?b)
-			(increase (total-cost) 1)))
+			))
 
   (:action pour-shaker-to-shot
            :parameters (?b - beverage ?d - shot ?h - hand ?s - shaker ?l ?l1 - level)
@@ -165,5 +165,5 @@
 			(contains ?d ?b)
 			(shaker-level ?s ?l1)
 			(not (shaker-level ?s ?l))
-			(increase (total-cost) 1)))
+			))
  )

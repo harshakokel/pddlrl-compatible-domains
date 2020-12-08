@@ -20,7 +20,7 @@
     (at_garage ?g - garage ?xy - junction ) ;; position of the starting garage
 
   )
-(:functions (total-cost) - number)
+
 
 ;; move the car in a road: no limit on the number of cars on the road
 (:action move_car_in_road
@@ -34,7 +34,7 @@
 		(clear ?xy_initial)
 		(at_car_road ?machine ?r1)
 		(not (at_car_jun ?machine ?xy_initial) )
-		(increase (total-cost) 1)
+		
 		)
 )
 
@@ -51,7 +51,7 @@
 		(at_car_jun ?machine ?xy_final)
 		(not (clear ?xy_final))
 		(not (at_car_road ?machine ?r1) )
-		(increase (total-cost) 1)
+		
 		)
 )
 
@@ -94,7 +94,7 @@
   :effect (and  
 		(road_connect ?r1 ?xy_initial ?xy_final)
 		(in_place ?r1)
-                (increase (total-cost) 30)
+                
 		)
 )
 
@@ -109,7 +109,7 @@
   :effect (and  
 		(road_connect ?r1 ?xy_initial ?xy_final)
 		(in_place ?r1)
-                (increase (total-cost) 20)
+                
 		)
 )
 
@@ -123,7 +123,7 @@
   :effect (and  
 		(not (in_place ?r1))
 		(not (road_connect ?r1 ?xy_initial ?xy_final))
-                (increase (total-cost) 10)
+                
 		(forall (?c1 - car)
                      (when (at_car_road ?c1 ?r1) 
 			(and

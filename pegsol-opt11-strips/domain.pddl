@@ -10,7 +10,7 @@
         (move-ended)
         (last-visited ?l - location)
     )
-    (:functions (total-cost) - number)
+    
 
     (:action jump-new-move
      :parameters (?from - location ?over - location ?to - location)
@@ -30,7 +30,7 @@
                  (free ?over)
                  (occupied ?to)
                  (last-visited ?to)
-                 (increase (total-cost) 1)
+                 
              )
     )
 

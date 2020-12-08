@@ -14,8 +14,7 @@
 (sum ?a ?b ?c - fuellevel)
 )
 
-(:functions 
-(total-cost) - number)
+
 
 (:action LOAD
 :parameters
@@ -25,7 +24,7 @@
 :precondition
 (and (at ?t ?l) (at ?p ?l))
 :effect
-(and (not (at ?p ?l)) (in ?p ?t) (increase (total-cost) 1))
+(and (not (at ?p ?l)) (in ?p ?t) )
 )
 
 (:action UNLOAD
@@ -36,7 +35,7 @@
 :precondition
 (and (at ?t ?l) (in ?p ?t))
 :effect
-(and (at ?p ?l) (not (in ?p ?t)) (increase (total-cost) 1))
+(and (at ?p ?l) (not (in ?p ?t)) )
 )
 
 (:action DRIVE
@@ -60,7 +59,7 @@
      (at ?t ?l2) 
      (not (fuel ?t ?fuelpre)) 
      (fuel ?t ?fuelpost)
-     (increase (total-cost) 1))
+     )
 )
 
 )

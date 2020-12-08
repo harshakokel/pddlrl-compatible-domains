@@ -9,7 +9,7 @@
     (curb-clear ?curb - curb)
  )
 
-(:functions (total-cost) - number)
+
 
 	(:action move-curb-to-curb
 		:parameters (?car - car ?curbsrc ?curbdest - curb)
@@ -23,7 +23,7 @@
 			(curb-clear ?curbsrc)
 			(at-curb-num ?car ?curbdest)
 			(not (at-curb-num ?car ?curbsrc))
-                        (increase (total-cost) 1)
+                        
 		)
 	)
 
@@ -41,7 +41,7 @@
 			(behind-car ?car ?cardest)
 			(not (at-curb-num ?car ?curbsrc))
 			(not (at-curb ?car))
-                        (increase (total-cost) 1)
+                        
 		)
 	)
 
@@ -58,7 +58,7 @@
 			(at-curb-num ?car ?curbdest)
 			(not (behind-car ?car ?carsrc))
 			(at-curb ?car)
-                        (increase (total-cost) 1)
+                        
 		)
 	)
 
@@ -75,7 +75,7 @@
 			(car-clear ?carsrc)
 			(behind-car ?car ?cardest)
 			(not (behind-car ?car ?carsrc))
-                        (increase (total-cost) 1)
+                        
 		)
 	)
 )
