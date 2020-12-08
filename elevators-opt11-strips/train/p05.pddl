@@ -44,20 +44,13 @@ slow0-0 slow1-0 - slow-elevator
 (passenger-at p2 n0)
 (passenger-at p3 n7)
 
-(= (travel-slow n0 n1) 6) (= (travel-slow n0 n2) 7) (= (travel-slow n0 n3) 8) (= (travel-slow n0 n4) 9) (= (travel-slow n0 n5) 10) (= (travel-slow n0 n6) 11) (= (travel-slow n1 n2) 6) (= (travel-slow n1 n3) 7) (= (travel-slow n1 n4) 8) (= (travel-slow n1 n5) 9) (= (travel-slow n1 n6) 10) (= (travel-slow n2 n3) 6) (= (travel-slow n2 n4) 7) (= (travel-slow n2 n5) 8) (= (travel-slow n2 n6) 9) (= (travel-slow n3 n4) 6) (= (travel-slow n3 n5) 7) (= (travel-slow n3 n6) 8) (= (travel-slow n4 n5) 6) (= (travel-slow n4 n6) 7) (= (travel-slow n5 n6) 6) 
-
-(= (travel-slow n6 n7) 6) (= (travel-slow n6 n8) 7) (= (travel-slow n6 n9) 8) (= (travel-slow n6 n10) 9) (= (travel-slow n6 n11) 10) (= (travel-slow n6 n12) 11) (= (travel-slow n7 n8) 6) (= (travel-slow n7 n9) 7) (= (travel-slow n7 n10) 8) (= (travel-slow n7 n11) 9) (= (travel-slow n7 n12) 10) (= (travel-slow n8 n9) 6) (= (travel-slow n8 n10) 7) (= (travel-slow n8 n11) 8) (= (travel-slow n8 n12) 9) (= (travel-slow n9 n10) 6) (= (travel-slow n9 n11) 7) (= (travel-slow n9 n12) 8) (= (travel-slow n10 n11) 6) (= (travel-slow n10 n12) 7) (= (travel-slow n11 n12) 6) 
 
 
-(= (travel-fast n0 n3) 10) (= (travel-fast n0 n6) 19) (= (travel-fast n0 n9) 28) (= (travel-fast n0 n12) 37) 
 
-(= (travel-fast n3 n6) 10) (= (travel-fast n3 n9) 19) (= (travel-fast n3 n12) 28) 
 
-(= (travel-fast n6 n9) 10) (= (travel-fast n6 n12) 19) 
 
-(= (travel-fast n9 n12) 10) 
 
-(= (total-cost) 0)
+
 
 )
 

@@ -83,7 +83,6 @@
         pos-6-4 - location
     )
     (:init
-        (= (total-cost) 0)
         (move-ended)
         (IN-LINE pos-0-2 pos-0-3 pos-0-4)
         (IN-LINE pos-0-4 pos-0-3 pos-0-2)

@@ -195,7 +195,6 @@
     (PROP_USERNAME id_gdomainuser str__mary)
     (PROP_WINDOWS_DOMAIN id_adomain str__alpha)
     (procnone)
-    (= (total-cost) 0)
 )
 (:goal
 (and

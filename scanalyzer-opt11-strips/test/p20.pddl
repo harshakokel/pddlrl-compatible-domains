@@ -27,7 +27,6 @@
     seg-out-3b - segment
   )
   (:init
-    (= (total-cost) 0)
     (CYCLE-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b)
     (CYCLE-4 seg-in-1a seg-in-1b seg-out-2a seg-out-2b)
     (CYCLE-4 seg-in-1a seg-in-1b seg-out-3a seg-out-3b)

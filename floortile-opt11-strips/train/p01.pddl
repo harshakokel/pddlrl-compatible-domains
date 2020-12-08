@@ -8,7 +8,6 @@
            white black - color
 )
  (:init 
-   (= (total-cost) 0)
    (robot-at robot1 tile_0-1)
    (robot-has robot1 white)
    (robot-at robot2 tile_2-2)

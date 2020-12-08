@@ -41,20 +41,13 @@ slow0-0 slow1-0 - slow-elevator
 (passenger-at p3 n1)
 (passenger-at p4 n8)
 
-(= (travel-slow n0 n1) 6) (= (travel-slow n0 n2) 7) (= (travel-slow n0 n3) 8) (= (travel-slow n0 n4) 9) (= (travel-slow n1 n2) 6) (= (travel-slow n1 n3) 7) (= (travel-slow n1 n4) 8) (= (travel-slow n2 n3) 6) (= (travel-slow n2 n4) 7) (= (travel-slow n3 n4) 6) 
-
-(= (travel-slow n4 n5) 6) (= (travel-slow n4 n6) 7) (= (travel-slow n4 n7) 8) (= (travel-slow n4 n8) 9) (= (travel-slow n5 n6) 6) (= (travel-slow n5 n7) 7) (= (travel-slow n5 n8) 8) (= (travel-slow n6 n7) 6) (= (travel-slow n6 n8) 7) (= (travel-slow n7 n8) 6) 
 
 
-(= (travel-fast n0 n2) 7) (= (travel-fast n0 n4) 13) (= (travel-fast n0 n6) 19) (= (travel-fast n0 n8) 25) 
 
-(= (travel-fast n2 n4) 7) (= (travel-fast n2 n6) 13) (= (travel-fast n2 n8) 19) 
 
-(= (travel-fast n4 n6) 7) (= (travel-fast n4 n8) 13) 
 
-(= (travel-fast n6 n8) 7) 
 
-(= (total-cost) 0)
+
 
 )
 

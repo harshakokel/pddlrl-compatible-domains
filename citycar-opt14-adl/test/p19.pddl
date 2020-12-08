@@ -64,7 +64,6 @@ road0 road1 road2 road3 road4 - road
 (starting car0 garage1)
 (starting car1 garage2)
 (starting car2 garage0)
-(= (total-cost) 0)
 )
 (:goal
 (and

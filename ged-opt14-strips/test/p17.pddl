@@ -16,7 +16,7 @@
                (PRESENT G54) (PRESENT SUB1) (PRESENT SUB6)
                (CW SUB6 SUB5) (CW SUB1 SUB6) (CW G54 SUB1)
                (CW SUB4 G54) (CW SUB3 SUB4) (CW SUB2 SUB3)
-               (CW SUB5 SUB2) (IDLE) (= (TOTAL-COST) 0))
+               (CW SUB5 SUB2) (IDLE) )
         (:GOAL (AND (NORMAL SUB5) (NORMAL SUB3) (NORMAL SUB2)
                     (NORMAL SUB4) (NORMAL SUB1) (INVERTED G54)
                     (NORMAL SUB6) (CW SUB6 SUB5) (CW G54 SUB6)

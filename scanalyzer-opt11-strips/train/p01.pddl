@@ -11,7 +11,6 @@
     seg-out-1b - segment
   )
   (:init
-    (= (total-cost) 0)
     (CYCLE-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b)
     (CYCLE-4-WITH-ANALYSIS seg-in-1a seg-in-1b seg-out-1a seg-out-1b)
     (on car-in-1a seg-in-1a)

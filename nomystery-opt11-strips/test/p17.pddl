@@ -10951,7 +10951,6 @@ level0 level1 level2 level3 level4 level5 level6 level7 level8 level9 level10 le
 
 (at t0 l9)
 (fuel t0 level146)
-(= (total-cost) 0)
 
 (at p0 l3)
 (at p1 l4)

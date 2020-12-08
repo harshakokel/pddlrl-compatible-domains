@@ -286,10 +286,6 @@
     (space_rooms room3)
     (space_rooms room4)
     (space_rooms room5)
-    (= (group_worker_cost worker2) 60)
-    (= (group_worker_cost worker3) 30)
-    (= (group_worker_cost worker4) 15)
-    (= (group_worker_cost worker5) 6)
 )
 (:goal
 (and

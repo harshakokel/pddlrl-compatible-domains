@@ -341,7 +341,6 @@
     (TO-DEAL card-d0-s0-v1 pile-2 deal-1 card-d1-s1-v2)
     (TO-DEAL card-d1-s1-v2 pile-3 deal-1 card-d1-s1-v7)
     (TO-DEAL card-d1-s1-v7 pile-4 deal-1 card-d1-s1-v3)
-    (= (total-cost) 0)
 )
 (:goal
 (and

@@ -278,9 +278,6 @@
     (built_rooms room2 worker2)
     (space_rooms room3)
     (space_rooms room4)
-    (= (group_worker_cost worker2) 60)
-    (= (group_worker_cost worker3) 30)
-    (= (group_worker_cost worker4) 15)
 )
 (:goal
 (and

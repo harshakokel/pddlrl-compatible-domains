@@ -497,7 +497,6 @@
     (clear pos-11-08)
     (clear pos-11-10)
     (clear pos-12-10)
-    (= (total-cost) 0)
   )
   (:goal (and
     (at-goal stone-01)

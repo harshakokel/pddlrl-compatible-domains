@@ -209,7 +209,6 @@
     (PROP_USERNAME id_sdomainuser str__robert)
     (PROP_WINDOWS_DOMAIN id_adomain str__alpha)
     (procnone)
-    (= (total-cost) 0)
 )
 (:goal
 (and

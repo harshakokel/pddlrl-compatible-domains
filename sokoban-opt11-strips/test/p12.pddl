@@ -1706,7 +1706,6 @@
     (clear pos-28-14)
     (clear pos-28-15)
     (clear pos-28-16)
-    (= (total-cost) 0)
   )
   (:goal (and
     (at-goal stone-01)

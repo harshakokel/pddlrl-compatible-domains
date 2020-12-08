@@ -5,7 +5,6 @@
      curb_00 curb_01 curb_02 curb_03 curb_04 curb_05 curb_06 curb_07 curb_08 curb_09 curb_10 curb_11 - curb
   )
   (:init
-    (= (total-cost) 0)
     (at-curb car_07)
     (at-curb-num car_07 curb_00)
     (behind-car car_16 car_07)

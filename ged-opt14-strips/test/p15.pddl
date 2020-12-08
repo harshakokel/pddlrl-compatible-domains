@@ -15,7 +15,7 @@
                (PRESENT G90) (PRESENT SUB4) (PRESENT SUB2)
                (CW SUB2 SUB6) (CW SUB4 SUB2) (CW G90 SUB4)
                (CW SUB3 G90) (CW SUB1 SUB3) (CW SUB5 SUB1)
-               (CW SUB6 SUB5) (IDLE) (= (TOTAL-COST) 0))
+               (CW SUB6 SUB5) (IDLE) )
         (:GOAL (AND (NORMAL SUB6) (NORMAL SUB1) (INVERTED G90)
                     (NORMAL SUB3) (NORMAL SUB4) (NORMAL SUB5)
                     (NORMAL SUB2) (CW SUB2 SUB6) (CW SUB5 SUB2)

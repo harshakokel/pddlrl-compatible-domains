@@ -166,7 +166,6 @@
     (PROP_USERNAME id_wdomainuser str__linda)
     (PROP_WINDOWS_DOMAIN id_adomain str__alpha)
     (procnone)
-    (= (total-cost) 0)
 )
 (:goal
 (and

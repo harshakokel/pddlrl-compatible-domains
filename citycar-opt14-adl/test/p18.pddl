@@ -63,7 +63,6 @@ road0 road1 road2 road3 road4 - road
 (at_garage garage2 junction0-0)
 (starting car0 garage0)
 (starting car1 garage1)
-(= (total-cost) 0)
 )
 (:goal
 (and
