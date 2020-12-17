@@ -61,7 +61,6 @@
     (ok)
     (home_improvement ?imp - improvement)
 )
-ni
 (:action ag__harvest_collect_end
     :parameters (?r - round ?s - stage)
     :precondition
