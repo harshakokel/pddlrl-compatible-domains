@@ -1,0 +1,9 @@
+
+train instances:
+
+elevators-opt11-strips instances obtained from classical-domains.
+manually removed action-costs.
+
+initially, we used easy-hard split for elevators-opt11-strips. however,
+it turned out FF can solve them completely, so we moved all instances from elevators-opt11-strips to train,
+then used sat11 instances as test.
