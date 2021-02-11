@@ -1,0 +1,8 @@
+
+obtained from classical-domains.
+
+test instances are randomly picked (thus the difficulty should be evenly distributed)
+from problogistics-16-0.pddl ~ problogistics-100-1.pddl
+
+ls *.pddl | sort -R | tail -n +10 | parallel rm
+
