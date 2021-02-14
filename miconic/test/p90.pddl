@@ -1,11 +1,11 @@
-(define (problem mixed-f32-p16-u0-v0-g0-a0-n0-A0-B0-N0-F0-r1)
+(define (problem mixed-f36-p18-u0-v0-g0-a0-n0-A0-B0-N0-F0-r4)
    (:domain miconic)
    (:objects p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 
-             p10 p11 p12 p13 p14 p15 
+             p10 p11 p12 p13 p14 p15 p16 p17 
              f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 
              f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 
              f20 f21 f22 f23 f24 f25 f26 f27 f28 f29 
-             f30 f31 )
+             f30 f31 f32 f33 f34 f35 )
 
 
 (:init
@@ -25,6 +25,8 @@
 (passenger p13)
 (passenger p14)
 (passenger p15)
+(passenger p16)
+(passenger p17)
 
 (floor f0)
 (floor f1)
@@ -58,6 +60,11 @@
 (floor f29)
 (floor f30)
 (floor f31)
+(floor f32)
+(floor f33)
+(floor f34)
+(floor f35)
+
 
 (above f0 f1)
 (above f0 f2)
@@ -90,6 +97,10 @@
 (above f0 f29)
 (above f0 f30)
 (above f0 f31)
+(above f0 f32)
+(above f0 f33)
+(above f0 f34)
+(above f0 f35)
 
 (above f1 f2)
 (above f1 f3)
@@ -121,6 +132,10 @@
 (above f1 f29)
 (above f1 f30)
 (above f1 f31)
+(above f1 f32)
+(above f1 f33)
+(above f1 f34)
+(above f1 f35)
 
 (above f2 f3)
 (above f2 f4)
@@ -151,6 +166,10 @@
 (above f2 f29)
 (above f2 f30)
 (above f2 f31)
+(above f2 f32)
+(above f2 f33)
+(above f2 f34)
+(above f2 f35)
 
 (above f3 f4)
 (above f3 f5)
@@ -180,6 +199,10 @@
 (above f3 f29)
 (above f3 f30)
 (above f3 f31)
+(above f3 f32)
+(above f3 f33)
+(above f3 f34)
+(above f3 f35)
 
 (above f4 f5)
 (above f4 f6)
@@ -208,6 +231,10 @@
 (above f4 f29)
 (above f4 f30)
 (above f4 f31)
+(above f4 f32)
+(above f4 f33)
+(above f4 f34)
+(above f4 f35)
 
 (above f5 f6)
 (above f5 f7)
@@ -235,6 +262,10 @@
 (above f5 f29)
 (above f5 f30)
 (above f5 f31)
+(above f5 f32)
+(above f5 f33)
+(above f5 f34)
+(above f5 f35)
 
 (above f6 f7)
 (above f6 f8)
@@ -261,6 +292,10 @@
 (above f6 f29)
 (above f6 f30)
 (above f6 f31)
+(above f6 f32)
+(above f6 f33)
+(above f6 f34)
+(above f6 f35)
 
 (above f7 f8)
 (above f7 f9)
@@ -286,6 +321,10 @@
 (above f7 f29)
 (above f7 f30)
 (above f7 f31)
+(above f7 f32)
+(above f7 f33)
+(above f7 f34)
+(above f7 f35)
 
 (above f8 f9)
 (above f8 f10)
@@ -310,6 +349,10 @@
 (above f8 f29)
 (above f8 f30)
 (above f8 f31)
+(above f8 f32)
+(above f8 f33)
+(above f8 f34)
+(above f8 f35)
 
 (above f9 f10)
 (above f9 f11)
@@ -333,6 +376,10 @@
 (above f9 f29)
 (above f9 f30)
 (above f9 f31)
+(above f9 f32)
+(above f9 f33)
+(above f9 f34)
+(above f9 f35)
 
 (above f10 f11)
 (above f10 f12)
@@ -355,6 +402,10 @@
 (above f10 f29)
 (above f10 f30)
 (above f10 f31)
+(above f10 f32)
+(above f10 f33)
+(above f10 f34)
+(above f10 f35)
 
 (above f11 f12)
 (above f11 f13)
@@ -376,6 +427,10 @@
 (above f11 f29)
 (above f11 f30)
 (above f11 f31)
+(above f11 f32)
+(above f11 f33)
+(above f11 f34)
+(above f11 f35)
 
 (above f12 f13)
 (above f12 f14)
@@ -396,6 +451,10 @@
 (above f12 f29)
 (above f12 f30)
 (above f12 f31)
+(above f12 f32)
+(above f12 f33)
+(above f12 f34)
+(above f12 f35)
 
 (above f13 f14)
 (above f13 f15)
@@ -415,6 +474,10 @@
 (above f13 f29)
 (above f13 f30)
 (above f13 f31)
+(above f13 f32)
+(above f13 f33)
+(above f13 f34)
+(above f13 f35)
 
 (above f14 f15)
 (above f14 f16)
@@ -433,6 +496,10 @@
 (above f14 f29)
 (above f14 f30)
 (above f14 f31)
+(above f14 f32)
+(above f14 f33)
+(above f14 f34)
+(above f14 f35)
 
 (above f15 f16)
 (above f15 f17)
@@ -450,6 +517,10 @@
 (above f15 f29)
 (above f15 f30)
 (above f15 f31)
+(above f15 f32)
+(above f15 f33)
+(above f15 f34)
+(above f15 f35)
 
 (above f16 f17)
 (above f16 f18)
@@ -466,6 +537,10 @@
 (above f16 f29)
 (above f16 f30)
 (above f16 f31)
+(above f16 f32)
+(above f16 f33)
+(above f16 f34)
+(above f16 f35)
 
 (above f17 f18)
 (above f17 f19)
@@ -481,6 +556,10 @@
 (above f17 f29)
 (above f17 f30)
 (above f17 f31)
+(above f17 f32)
+(above f17 f33)
+(above f17 f34)
+(above f17 f35)
 
 (above f18 f19)
 (above f18 f20)
@@ -495,6 +574,10 @@
 (above f18 f29)
 (above f18 f30)
 (above f18 f31)
+(above f18 f32)
+(above f18 f33)
+(above f18 f34)
+(above f18 f35)
 
 (above f19 f20)
 (above f19 f21)
@@ -508,6 +591,10 @@
 (above f19 f29)
 (above f19 f30)
 (above f19 f31)
+(above f19 f32)
+(above f19 f33)
+(above f19 f34)
+(above f19 f35)
 
 (above f20 f21)
 (above f20 f22)
@@ -520,6 +607,10 @@
 (above f20 f29)
 (above f20 f30)
 (above f20 f31)
+(above f20 f32)
+(above f20 f33)
+(above f20 f34)
+(above f20 f35)
 
 (above f21 f22)
 (above f21 f23)
@@ -531,6 +622,10 @@
 (above f21 f29)
 (above f21 f30)
 (above f21 f31)
+(above f21 f32)
+(above f21 f33)
+(above f21 f34)
+(above f21 f35)
 
 (above f22 f23)
 (above f22 f24)
@@ -541,6 +636,10 @@
 (above f22 f29)
 (above f22 f30)
 (above f22 f31)
+(above f22 f32)
+(above f22 f33)
+(above f22 f34)
+(above f22 f35)
 
 (above f23 f24)
 (above f23 f25)
@@ -550,6 +649,10 @@
 (above f23 f29)
 (above f23 f30)
 (above f23 f31)
+(above f23 f32)
+(above f23 f33)
+(above f23 f34)
+(above f23 f35)
 
 (above f24 f25)
 (above f24 f26)
@@ -558,6 +661,10 @@
 (above f24 f29)
 (above f24 f30)
 (above f24 f31)
+(above f24 f32)
+(above f24 f33)
+(above f24 f34)
+(above f24 f35)
 
 (above f25 f26)
 (above f25 f27)
@@ -565,76 +672,120 @@
 (above f25 f29)
 (above f25 f30)
 (above f25 f31)
+(above f25 f32)
+(above f25 f33)
+(above f25 f34)
+(above f25 f35)
 
 (above f26 f27)
 (above f26 f28)
 (above f26 f29)
 (above f26 f30)
 (above f26 f31)
+(above f26 f32)
+(above f26 f33)
+(above f26 f34)
+(above f26 f35)
 
 (above f27 f28)
 (above f27 f29)
 (above f27 f30)
 (above f27 f31)
+(above f27 f32)
+(above f27 f33)
+(above f27 f34)
+(above f27 f35)
 
 (above f28 f29)
 (above f28 f30)
 (above f28 f31)
+(above f28 f32)
+(above f28 f33)
+(above f28 f34)
+(above f28 f35)
 
 (above f29 f30)
 (above f29 f31)
+(above f29 f32)
+(above f29 f33)
+(above f29 f34)
+(above f29 f35)
 
 (above f30 f31)
+(above f30 f32)
+(above f30 f33)
+(above f30 f34)
+(above f30 f35)
+
+(above f31 f32)
+(above f31 f33)
+(above f31 f34)
+(above f31 f35)
+
+(above f32 f33)
+(above f32 f34)
+(above f32 f35)
+
+(above f33 f34)
+(above f33 f35)
+
+(above f34 f35)
 
 
 
-(origin p0 f24)
-(destin p0 f5)
+(origin p0 f27)
+(destin p0 f15)
 
-(origin p1 f23)
-(destin p1 f28)
+(origin p1 f30)
+(destin p1 f2)
 
 (origin p2 f0)
-(destin p2 f23)
+(destin p2 f18)
 
-(origin p3 f17)
-(destin p3 f22)
+(origin p3 f10)
+(destin p3 f35)
 
-(origin p4 f21)
-(destin p4 f3)
+(origin p4 f33)
+(destin p4 f21)
 
 (origin p5 f20)
-(destin p5 f29)
+(destin p5 f2)
 
-(origin p6 f19)
-(destin p6 f18)
+(origin p6 f1)
+(destin p6 f2)
 
-(origin p7 f13)
-(destin p7 f4)
+(origin p7 f3)
+(destin p7 f18)
 
-(origin p8 f2)
-(destin p8 f22)
+(origin p8 f33)
+(destin p8 f20)
 
-(origin p9 f23)
-(destin p9 f14)
+(origin p9 f13)
+(destin p9 f7)
 
-(origin p10 f13)
-(destin p10 f20)
+(origin p10 f1)
+(destin p10 f6)
 
-(origin p11 f31)
-(destin p11 f18)
+(origin p11 f1)
+(destin p11 f4)
 
-(origin p12 f13)
-(destin p12 f11)
+(origin p12 f18)
+(destin p12 f15)
 
-(origin p13 f17)
-(destin p13 f3)
+(origin p13 f16)
+(destin p13 f15)
 
-(origin p14 f28)
-(destin p14 f30)
+(origin p14 f7)
+(destin p14 f26)
 
-(origin p15 f28)
-(destin p15 f1)
+(origin p15 f6)
+(destin p15 f15)
+
+(origin p16 f5)
+(destin p16 f0)
+
+(origin p17 f17)
+(destin p17 f21)
 
 
 
@@ -662,6 +813,8 @@
 (served p13)
 (served p14)
 (served p15)
+(served p16)
+(served p17)
 ))
 )
 

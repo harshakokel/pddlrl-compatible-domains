@@ -1,4 +1,4 @@
-(define (problem mixed-f42-p21-u0-v0-g0-a0-n0-A0-B0-N0-F0-r3)
+(define (problem mixed-f42-p21-u0-v0-g0-a0-n0-A0-B0-N0-F0-r2)
    (:domain miconic)
    (:objects p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 
              p10 p11 p12 p13 p14 p15 p16 p17 p18 p19 
@@ -980,68 +980,68 @@
 
 
 
-(origin p0 f35)
-(destin p0 f5)
+(origin p0 f37)
+(destin p0 f36)
 
-(origin p1 f0)
-(destin p1 f13)
+(origin p1 f28)
+(destin p1 f30)
 
-(origin p2 f9)
-(destin p2 f6)
+(origin p2 f27)
+(destin p2 f30)
 
-(origin p3 f35)
-(destin p3 f30)
+(origin p3 f2)
+(destin p3 f32)
 
-(origin p4 f27)
-(destin p4 f26)
+(origin p4 f1)
+(destin p4 f21)
 
-(origin p5 f19)
-(destin p5 f12)
+(origin p5 f2)
+(destin p5 f23)
 
-(origin p6 f28)
-(destin p6 f36)
+(origin p6 f13)
+(destin p6 f20)
 
-(origin p7 f22)
-(destin p7 f1)
+(origin p7 f24)
+(destin p7 f36)
 
-(origin p8 f20)
-(destin p8 f1)
+(origin p8 f1)
+(destin p8 f33)
 
-(origin p9 f32)
-(destin p9 f30)
+(origin p9 f30)
+(destin p9 f7)
 
-(origin p10 f22)
-(destin p10 f35)
+(origin p10 f26)
+(destin p10 f40)
 
-(origin p11 f36)
-(destin p11 f41)
+(origin p11 f18)
+(destin p11 f35)
 
-(origin p12 f40)
-(destin p12 f10)
+(origin p12 f15)
+(destin p12 f26)
 
-(origin p13 f4)
-(destin p13 f0)
+(origin p13 f0)
+(destin p13 f3)
 
-(origin p14 f41)
-(destin p14 f35)
+(origin p14 f25)
+(destin p14 f24)
 
-(origin p15 f23)
-(destin p15 f34)
+(origin p15 f39)
+(destin p15 f19)
 
-(origin p16 f40)
-(destin p16 f21)
+(origin p16 f10)
+(destin p16 f25)
 
-(origin p17 f4)
-(destin p17 f6)
+(origin p17 f3)
+(destin p17 f41)
 
 (origin p18 f27)
-(destin p18 f39)
+(destin p18 f35)
 
-(origin p19 f34)
-(destin p19 f13)
+(origin p19 f40)
+(destin p19 f6)
 
-(origin p20 f23)
-(destin p20 f12)
+(origin p20 f35)
+(destin p20 f20)
 
 
 
