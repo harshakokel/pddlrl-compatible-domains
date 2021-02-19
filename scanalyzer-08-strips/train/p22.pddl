@@ -1,4 +1,4 @@
-(define (problem scanalyzer3d-52)
+(define (problem scanalyzer3d-54)
   (:domain scanalyzer3d)
   (:objects
     car-in-1a - car
