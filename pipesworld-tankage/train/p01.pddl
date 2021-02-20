@@ -3,6 +3,8 @@
   (:domain pipesworld_strips)
   (:objects
 
+   lco gasoleo rat-a oca1 oc1b - product
+
     	B0 B3 B1 B4 B2 B5 - batch-atom
 	A1 A2 A3 - area
 	S12 S13 - pipe
