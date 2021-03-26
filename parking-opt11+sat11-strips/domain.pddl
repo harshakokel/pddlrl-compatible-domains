@@ -1,5 +1,5 @@
 (define (domain parking)
- (:requirements :strips :typing :action-costs)
+ (:requirements :strips :typing )
  (:types car curb)
  (:predicates 
     (at-curb ?car - car) 
