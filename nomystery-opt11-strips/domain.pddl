@@ -1,5 +1,5 @@
 (define (domain transport-strips)
-(:requirements :typing :action-costs)
+(:requirements :typing )
 
 (:types location fuellevel locatable - object 
 	package truck - locatable
