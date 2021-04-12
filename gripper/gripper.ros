@@ -21,12 +21,10 @@ exec ros -Q -- $0 "$@"
 
   (let ((n (parse-integer n)) at-init at-goal)
     (iter (for i below n)
-          (for room = (random 2))
-          (if (= room 0)
-              (progn (push `(at ,(ball i) rooma) at-init)
-                     (push `(at ,(ball i) roomb) at-goal))
-              (progn (push `(at ,(ball i) roomb) at-init)
-                     (push `(at ,(ball i) rooma) at-goal))))
+          (for room-src = (random-elt `(rooma roomb)))
+          (for room-dst = (random-elt `(rooma roomb)))
+          (push `(at ,(ball i) ,room-src) at-init)
+          (push `(at ,(ball i) ,room-dst) at-goal))
 
     (format t "~(~:s~)"
             `(define (problem ,(intern (format nil "GRIPPER-~a-~a" seed n)))
