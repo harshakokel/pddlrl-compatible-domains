@@ -2,6 +2,7 @@
 
 set -e
 
+rm -rf train test
 mkdir -pv train test
 
 parallel "./blocksworld.sh 4 {1} > train/o{1}-p{2}.pddl" ::: {02..06} ::: {01..50}

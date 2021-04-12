@@ -1,0 +1,51 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp(ql:quickload '(:alexandria :iterate) :silent t)
+  )
+
+(defpackage :ros.script.gripper.3827230863
+  (:use :cl :alexandria :iterate))
+(in-package :ros.script.gripper.3827230863)
+
+(defun ball (n)
+  (intern (format nil "BALL~a" n)))
+
+(defun main (seed n &rest argv)
+  (declare (ignorable argv))
+  (setf *random-state* (sb-ext:seed-random-state (parse-integer seed)))
+
+  (let ((n (parse-integer n)) at-init at-goal)
+    (iter (for i below n)
+          (for room = (random 2))
+          (if (= room 0)
+              (progn (push `(at ,(ball i) rooma) at-init)
+                     (push `(at ,(ball i) roomb) at-goal))
+              (progn (push `(at ,(ball i) roomb) at-init)
+                     (push `(at ,(ball i) rooma) at-goal))))
+
+    (format t "~(~:s~)"
+            `(define (problem ,(intern (format nil "GRIPPER-~a-~a" seed n)))
+                 (:domain gripper-strips)
+               (:objects  rooma roomb left right ,@(mapcar #'ball (iota n)))
+               (:init
+                (room rooma)
+                (room roomb)
+                (gripper left)
+                (gripper right)
+                ,@(iter (for i below n)
+                        (collecting
+                         `(ball ,(ball i))))
+                (free left)
+                (free right)
+                ,@at-init
+                (at-robby rooma))
+               (:goal
+                (and
+                 ,@at-goal))))))
+
+;;; vim: set ft=lisp lisp:
