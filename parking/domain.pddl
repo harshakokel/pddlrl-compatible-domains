@@ -1,1 +1,1 @@
-parking-untyped.pddl
+parking-typed.pddl
