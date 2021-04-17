@@ -1,0 +1,10 @@
+
+
+* Parking
+
+obtained from ipc2008 learning track generator (same as ipc2008 deterministic track, also for ipc2011)
+
+originally from https://ipc08.icaps-conference.org/learning/pages/domain_descriptions.html
+
+
+

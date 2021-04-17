@@ -3,3 +3,7 @@
 *.log
 *.err
 *.ff
+*.o
+*.bin
+miconic/miconic
+visitall/visitall

@@ -1,0 +1,68 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp(ql:quickload '() :silent t)
+  )
+
+(defpackage :ros.script.count-objects.3827224541
+  (:use :cl))
+(in-package :ros.script.count-objects.3827224541)
+
+#|
+Count the number of objects in a PDDL file.
+
+Usage example:
+./count-objects.ros blocks/test/o010-p001.pddl
+
+Explanation:
+
+(define (problem BW-rand-10)
+  (:domain blocksworld)
+  (:objects b1 b2 b3 b4 b5 b6 b7 b8 b9 b10 )
+  (:init ...)
+  (:goal (and ..)))
+
+nthcdr 2
+
+((:domain blocksworld)
+ (:objects b1 b2 b3 b4 b5 b6 b7 b8 b9 b10 )
+ (:init ...)
+ (:goal (and ..)))
+
+assoc :objects
+
+(:objects b1 b2 b3 b4 b5 b6 b7 b8 b9 b10 )
+
+cdr
+
+(b1 b2 b3 b4 b5 b6 b7 b8 b9 b10)
+
+length
+
+10
+
+format with 3 digit decimal, followed by a newline
+(cf. http://www.lispworks.com/documentation/HyperSpec/Body/22_cbb.htm)
+
+format t "~3,'0d~%"
+
+010
+
+|#
+
+
+(defun main (pddlfile &rest argv)
+  (declare (ignorable argv))
+  (format t "~3,'0d~%"
+          (length
+           (cdr
+            (assoc :objects
+                   (nthcdr 2
+                           (with-open-file (s pddlfile)
+                             (read s))))))))
+
+;;; vim: set ft=lisp lisp:

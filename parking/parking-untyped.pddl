@@ -1,19 +1,19 @@
-(define (domain parking)
- (:requirements :strips :typing )
- (:types car curb)
+(define (domain parking-untyped)
  (:predicates 
-    (at-curb ?car - car) 
-    (at-curb-num ?car - car ?curb - curb)
-    (behind-car ?car ?front-car - car)
-    (car-clear ?car - car) 
-    (curb-clear ?curb - curb)
+    (at-curb ?car) 
+    (at-curb-num ?car ?curb)
+    (behind-car ?car ?front-car)
+    (car-clear ?car) 
+    (curb-clear ?curb)
+    (car ?obj) 
+    (curb ?obj) 
  )
-
-
-
 	(:action move-curb-to-curb
-		:parameters (?car - car ?curbsrc ?curbdest - curb)
+		:parameters (?car ?curbsrc ?curbdest)
 		:precondition (and 
+			(curb ?curbsrc)
+			(curb ?curbdest)
+			(car ?car)
 			(car-clear ?car)
 			(curb-clear ?curbdest)
 			(at-curb-num ?car ?curbsrc)
@@ -23,13 +23,15 @@
 			(curb-clear ?curbsrc)
 			(at-curb-num ?car ?curbdest)
 			(not (at-curb-num ?car ?curbsrc))
-                        
 		)
 	)
 
 	(:action move-curb-to-car
-		:parameters (?car - car ?curbsrc - curb ?cardest - car)
+		:parameters (?car ?curbsrc ?cardest)
 		:precondition (and 
+			(curb ?curbsrc)
+			(car ?cardest)
+			(car ?car)
 			(car-clear ?car)
 			(car-clear ?cardest)
 			(at-curb-num ?car ?curbsrc)
@@ -40,14 +42,16 @@
 			(curb-clear ?curbsrc)
 			(behind-car ?car ?cardest)
 			(not (at-curb-num ?car ?curbsrc))
-			(not (at-curb ?car))
-                        
+			(not (at-curb ?car)) 
 		)
 	)
 
 	(:action move-car-to-curb
-		:parameters (?car - car ?carsrc - car ?curbdest - curb)
+		:parameters (?car ?carsrc ?curbdest)
 		:precondition (and 
+			(curb ?curbdest)
+			(car ?carsrc)
+			(car ?car)
 			(car-clear ?car)
 			(curb-clear ?curbdest)
 			(behind-car ?car ?carsrc)
@@ -57,14 +61,16 @@
 			(car-clear ?carsrc)
 			(at-curb-num ?car ?curbdest)
 			(not (behind-car ?car ?carsrc))
-			(at-curb ?car)
-                        
+			(at-curb ?car) 
 		)
 	)
 
 	(:action move-car-to-car
-		:parameters (?car - car ?carsrc - car ?cardest - car)
+		:parameters (?carsrc ?car ?cardest)
 		:precondition (and 
+			(car ?cardest)
+			(car ?carsrc)
+			(car ?car)
 			(car-clear ?car)
 			(car-clear ?cardest)
 			(behind-car ?car ?carsrc)
@@ -75,7 +81,6 @@
 			(car-clear ?carsrc)
 			(behind-car ?car ?cardest)
 			(not (behind-car ?car ?carsrc))
-                        
 		)
 	)
 )
