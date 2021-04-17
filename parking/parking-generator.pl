@@ -51,7 +51,7 @@ sub define {
 	my $s = "";
 	$s .= "(define \n"; 
   $s .= "  (problem parking1)\n";
-	$s .= "  (:domain parking-lot)\n";
+	$s .= "  (:domain parking-untyped)\n";
   $s .= objects();
   $s .= init();
   $s .= goal();

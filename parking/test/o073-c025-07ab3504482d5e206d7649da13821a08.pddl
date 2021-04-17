@@ -1,6 +1,6 @@
 (define 
   (problem parking1)
-  (:domain parking-lot)
+  (:domain parking-untyped)
   (:objects
     car_00
     car_01
