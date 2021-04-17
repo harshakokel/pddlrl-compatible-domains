@@ -1,0 +1,20 @@
+(define (problem grid-3)
+(:domain grid-visit-all)
+(:objects 
+	loc-x0-y1
+	loc-x2-y0
+	loc-x2-y2
+- place 
+        
+)
+(:init
+	(at-robot loc-x0-y1)
+	(visited loc-x0-y1)
+
+)
+(:goal
+(and 
+	(visited loc-x0-y1)
+)
+)
+)
