@@ -1,7 +1,6 @@
 (define 
   (problem parking1)
   (:domain parking-lot)
-  (:requirements :strips)
   (:objects
     car_0
     car_1

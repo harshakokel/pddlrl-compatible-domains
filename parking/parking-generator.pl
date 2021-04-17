@@ -52,7 +52,6 @@ sub define {
 	$s .= "(define \n"; 
   $s .= "  (problem parking1)\n";
 	$s .= "  (:domain parking-lot)\n";
-	$s .= "  (:requirements :strips)\n";
   $s .= objects();
   $s .= init();
   $s .= goal();
