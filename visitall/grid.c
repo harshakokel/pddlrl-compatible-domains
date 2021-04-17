@@ -93,7 +93,7 @@ int main( int argc, char *argv[] )
   i=0;
   while (i<u) {
     int hole = random ()%(x*x);	/* pick up a random location */
-    printf ("%d\n", hole);
+    /* printf ("%d\n", hole); */
     if (mask[hole] &&		/* just in case it is currently reachable */
 	(hole != (x+1)*x/2)) {	/* and it is not the initial location */
       mask[hole] = 0;		/* make it unreachable */
