@@ -2,9 +2,9 @@
 
 (define (problem BW-rand-4)
 (:domain blocksworld)
-(:objects b1 b2 b3 b4 )
+(:objects b1 b2 b3 b4 - block)
 (:init
-(arm-empty)
+(handempty)
 (on-table b1)
 (on b2 b4)
 (on-table b3)
