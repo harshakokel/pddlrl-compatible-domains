@@ -5,7 +5,7 @@ set -e
 rm -rf test train
 mkdir -pv test train
 
-parallel './logistics -r {1} -a {2} -c {3} -s {4} -p {5} > train/p$(echo {} | tr " " "-").pddl' ::: {001..010} ::: {1..3} ::: {1..3} ::: {1..3} ::: {1..3}
+parallel './logistics -r {1} -a {2} -c {3} -s {4} -p {5} > train/p$(echo {} | tr " " "-").pddl' ::: {001..010} ::: {2..4} ::: {2..4} ::: {2..4} ::: {2..4}
 
 parallel 'mv {} {//}/o$(../count-objects.bin {})-{/}' ::: train/*.pddl
 
