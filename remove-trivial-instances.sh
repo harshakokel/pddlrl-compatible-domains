@@ -15,7 +15,7 @@ per-problem (){
 
 per-domain (){
     cd $1
-    parallel -j 8 per-problem $(readlink -ef domain.pddl) ::: train/*.pddl test/*.pddl
+    parallel -j $((2*$(nproc))) per-problem $(readlink -ef domain.pddl) ::: train/*.pddl test/*.pddl
 }
 
 export -f per-domain per-problem
