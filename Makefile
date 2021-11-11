@@ -22,3 +22,4 @@ instances: build
 	cd gripper ; ./generate-test-train-instances-pddlrl.sh
 	cd logistics ; ./generate-test-train-instances-pddlrl.sh
 	cd satellite ; ./generate-test-train-instances-pddlrl.sh
+	./remove-trivial-instances.sh
