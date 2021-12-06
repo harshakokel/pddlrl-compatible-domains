@@ -13,7 +13,9 @@
   (:domain woodworking)
   (:objects
    verysmooth smooth rough - surface
-   varnished glazed untreated colourfragments - treatmentstatus
+      varnished glazed colourfragments - treatmentstatus
+   the-untreated - untreated
+
    natural - acolour
    small medium large - apartsize
 
