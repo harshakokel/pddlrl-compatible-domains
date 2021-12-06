@@ -20,8 +20,10 @@
 
    ;; Robot base
    (parked       ?r - robot)
+   (not-parked   ?r - robot)
    (base-pos     ?r - robot  ?x - xc  ?y - yc)
    (base-obstacle            ?x - xc  ?y - yc)
+   (not-base-obstacle        ?x - xc  ?y - yc)
 
    ;; Objects
    (object-pos   ?o - object ?x - xc  ?y - yc)
@@ -33,6 +35,7 @@
    (gripper-empty ?r - robot)
    (gripper-rel   ?r - robot ?x - xrel ?y - yrel)
    (gripper-obstacle         ?x - xc  ?y - yc)
+   (not-gripper-obstacle     ?x - xc  ?y - yc)
  
    ;; Cart
    (pushing       ?r - robot ?c - cart)
