@@ -14,7 +14,7 @@
   (:objects
    verysmooth smooth rough - surface
       varnished glazed colourfragments - treatmentstatus
-   the-untreated - untreated
+   untreated - untreated-p
 
    natural - acolour
    small medium large - apartsize

@@ -7,7 +7,7 @@
       acolour awood woodobj machine 
       surface treatmentstatus
       aboardsize apartsize - object
-      untreated - treatmentstatus
+      untreated-p - treatmentstatus
       highspeed-saw glazer grinder immersion-varnisher
       planer saw spray-varnisher - machine
       board part - woodobj)
@@ -34,7 +34,7 @@
   
 
   (:action do-immersion-varnish
-   :parameters (?untreated - untreated
+   :parameters (?untreated - untreated-p
                            ?x - part ?m - immersion-varnisher 
                  ?newcolour - acolour ?surface - surface)
     :precondition (and
@@ -51,7 +51,7 @@
             (colour ?x ?newcolour)))
 
   (:action do-spray-varnish
-   :parameters (?untreated - untreated
+   :parameters (?untreated - untreated-p
                            ?x - part ?m - spray-varnisher 
                  ?newcolour - acolour ?surface - surface)
     :precondition (and
@@ -68,7 +68,7 @@
             (colour ?x ?newcolour)))
 
   (:action do-glaze
-   :parameters (?untreated - untreated
+   :parameters (?untreated - untreated-p
                            ?x - part ?m - glazer 
                  ?newcolour - acolour)
     :precondition (and
@@ -103,7 +103,7 @@
             (colour ?x natural)))
 
   (:action do-plane
-   :parameters (?untreated - untreated
+   :parameters (?untreated - untreated-p
                            ?x - part ?m - planer ?oldsurface - surface
                  ?oldcolour - acolour ?oldtreatment - treatmentstatus) 
     :precondition (and 
@@ -141,7 +141,7 @@
             (empty ?m)))
             
   (:action cut-board-small
-   :parameters (?untreated - untreated
+   :parameters (?untreated - untreated-p
                            ?b - board ?p - part ?m - highspeed-saw ?w - awood
                  ?surface - surface ?size_before ?size_after - aboardsize)
     :precondition (and
@@ -163,7 +163,7 @@
             (boardsize ?b ?size_after)))
 
   (:action cut-board-medium
-   :parameters (?untreated - untreated
+   :parameters (?untreated - untreated-p
                            ?b - board ?p - part ?m - highspeed-saw ?w - awood
                  ?surface - surface 
                  ?size_before ?s1 ?size_after - aboardsize)
@@ -187,7 +187,7 @@
             (boardsize ?b ?size_after)))
 
   (:action cut-board-large
-   :parameters (?untreated - untreated
+   :parameters (?untreated - untreated-p
                            ?b - board ?p - part ?m - highspeed-saw ?w - awood
                  ?surface - surface 
                  ?size_before ?s1 ?s2 ?size_after - aboardsize)
@@ -212,7 +212,7 @@
             (boardsize ?b ?size_after)))
 
   (:action do-saw-small
-   :parameters (?untreated - untreated
+   :parameters (?untreated - untreated-p
                            ?b - board ?p - part ?m - saw ?w - awood
                  ?surface - surface ?size_before ?size_after - aboardsize) 
     :precondition (and 
@@ -234,7 +234,7 @@
             (boardsize ?b ?size_after)))
 
   (:action do-saw-medium
-   :parameters (?untreated - untreated
+   :parameters (?untreated - untreated-p
                            ?b - board ?p - part ?m - saw ?w - awood
                  ?surface - surface 
                  ?size_before ?s1 ?size_after - aboardsize) 
@@ -258,7 +258,7 @@
             (boardsize ?b ?size_after)))
 
   (:action do-saw-large
-   :parameters (?untreated - untreated
+   :parameters (?untreated - untreated-p
                            ?b - board ?p - part ?m - saw ?w - awood
                  ?surface - surface 
                  ?size_before ?s1 ?s2 ?size_after - aboardsize) 
