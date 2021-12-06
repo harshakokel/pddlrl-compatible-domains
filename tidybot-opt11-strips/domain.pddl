@@ -49,18 +49,18 @@
   (:action unpark
    :parameters (?r - robot ?x - xrel ?y - yrel)
    :precondition (and (parked ?r) (gripper-rel ?r ?x ?y) (zerox-rel ?x) (zeroy-rel ?y))
-   :effect       (not (parked ?r))
+   :effect       (and (not (parked ?r)) (not-parked ?r))
    )
 
   (:action park
    :parameters (?r - robot)
-   :precondition (and (not (parked ?r)) (not-pushing ?r))
-   :effect       (parked ?r)
+   :precondition (and (not-parked ?r) (not-pushing ?r))
+   :effect       (and (parked ?r) (not (not-parked ?r)))
    )
   
   (:action base-left
    :parameters (?r - robot ?cx - xc ?dx - xc ?y - yc)
-   :precondition (and (not (parked ?r))
+   :precondition (and (not-parked ?r)
                       (not-pushing ?r)
                       (leftof ?dx ?cx)
                       (base-pos ?r ?cx ?y)
@@ -71,7 +71,7 @@
 
   (:action base-right
    :parameters (?r - robot ?cx - xc ?dx - xc ?y - yc)
-   :precondition (and (not (parked ?r))
+   :precondition (and (not-parked ?r)
                       (not-pushing ?r)
                       (leftof ?cx ?dx)
                       (base-pos ?r ?cx ?y)
@@ -82,7 +82,7 @@
 
   (:action base-up
    :parameters (?r - robot ?x - xc ?cy - yc ?dy - yc)
-   :precondition (and (not (parked ?r))
+   :precondition (and (not-parked ?r)
                       (not-pushing ?r)
                       (above ?dy ?cy)
                       (base-pos ?r ?x ?cy)
@@ -93,7 +93,7 @@
 
   (:action base-down
    :parameters (?r - robot ?x - xc ?cy - yc ?dy - yc)
-   :precondition (and (not (parked ?r))
+   :precondition (and (not-parked ?r)
                       (not-pushing ?r)
                       (above ?cy ?dy)
                       (base-pos ?r ?x ?cy)
@@ -219,7 +219,7 @@
   ;; Cart grasping/ungrasping
   (:action grasp-cart-left
    :parameters (?r - robot ?c - cart ?x - xc ?y - yc ?cx - xc)
-   :precondition (and (not (parked ?r)) (not-pushed ?c)
+   :precondition (and (not-parked ?r) (not-pushed ?c)
                       (base-pos ?r ?x ?y) (cart-pos ?c ?cx ?y)
                       (leftof ?cx ?x) (not-pushing ?r))
    :effect       (and (pushing ?r ?c) (not (not-pushing ?r)) (not (not-pushed ?c))))
@@ -227,21 +227,21 @@
 
   (:action grasp-cart-right
    :parameters (?r - robot ?c - cart ?x - xc ?y - yc ?cx - xc)
-   :precondition (and (not (parked ?r)) (not-pushed ?c)
+   :precondition (and (not-parked ?r) (not-pushed ?c)
                       (base-pos ?r ?x ?y) (cart-pos ?c ?cx ?y)
                       (leftof ?x ?cx) (not-pushing ?r))
    :effect       (and (pushing ?r ?c) (not (not-pushing ?r)) (not (not-pushed ?c))))
 
   (:action grasp-cart-above
    :parameters (?r - robot ?c - cart ?x - xc ?y - yc ?cy - yc)
-   :precondition (and (not (parked ?r)) (not-pushed ?c)
+   :precondition (and (not-parked ?r) (not-pushed ?c)
                       (base-pos ?r ?x ?y) (cart-pos ?c ?x ?cy)
                       (above ?cy ?y) (not-pushing ?r))
    :effect       (and (pushing ?r ?c) (not (not-pushing ?r)) (not (not-pushed ?c))))
   
   (:action grasp-cart-below
    :parameters (?r - robot ?c - cart ?x - xc ?y - yc ?cy - yc)
-   :precondition (and (not (parked ?r)) (not-pushed ?c)
+   :precondition (and (not-parked ?r) (not-pushed ?c)
                       (base-pos ?r ?x ?y) (cart-pos ?c ?x ?cy)
                       (above ?y ?cy) (not-pushing ?r))
    :effect       (and (pushing ?r ?c) (not (not-pushing ?r)) (not (not-pushed ?c))))
