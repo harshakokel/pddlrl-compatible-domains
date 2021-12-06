@@ -12,6 +12,11 @@
 (define (problem wood-prob)
   (:domain woodworking)
   (:objects
+   verysmooth smooth rough - surface
+   varnished glazed untreated colourfragments - treatmentstatus
+   natural - acolour
+   small medium large - apartsize
+
     grinder0 - grinder
     glazer0 - glazer
     immersion-varnisher0 - immersion-varnisher

@@ -11,12 +11,6 @@
       planer saw spray-varnisher - machine
       board part - woodobj)
 
-  (:constants
-              verysmooth smooth rough - surface
-              varnished glazed untreated colourfragments - treatmentstatus
-              natural - acolour
-              small medium large - apartsize)
-
   (:predicates 
             (unused ?obj - part)
             (available ?obj - woodobj)
