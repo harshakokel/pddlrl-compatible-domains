@@ -65,8 +65,10 @@
                       (leftof ?dx ?cx)
                       (base-pos ?r ?cx ?y)
                       (not (base-obstacle ?dx ?y)))
-   :effect       (and (not (base-pos ?r ?cx ?y)) (base-pos ?r ?dx ?y)
-                      (not (base-obstacle ?cx ?y)) (base-obstacle ?dx ?y))
+   :effect       (and (not (base-pos ?r ?cx ?y))
+                      (base-pos ?r ?dx ?y)
+                      (not (base-obstacle ?cx ?y))
+                      (base-obstacle ?dx ?y))
    )
 
   (:action base-right
@@ -76,8 +78,10 @@
                       (leftof ?cx ?dx)
                       (base-pos ?r ?cx ?y)
                       (not (base-obstacle ?dx ?y)))
-   :effect       (and (not (base-pos ?r ?cx ?y)) (base-pos ?r ?dx ?y)
-                      (not (base-obstacle ?cx ?y)) (base-obstacle ?dx ?y))
+   :effect       (and (not (base-pos ?r ?cx ?y))
+                      (base-pos ?r ?dx ?y)
+                      (not (base-obstacle ?cx ?y))
+                      (base-obstacle ?dx ?y))
    )
 
   (:action base-up
@@ -87,8 +91,10 @@
                       (above ?dy ?cy)
                       (base-pos ?r ?x ?cy)
                       (not (base-obstacle ?x ?dy)))
-   :effect       (and (not (base-pos ?r ?x ?cy)) (base-pos ?r ?x ?dy)
-                      (not (base-obstacle ?x ?cy)) (base-obstacle ?x ?dy))
+   :effect       (and (not (base-pos ?r ?x ?cy))
+                      (base-pos ?r ?x ?dy)
+                      (not (base-obstacle ?x ?cy))
+                      (base-obstacle ?x ?dy))
    )
 
   (:action base-down
@@ -98,8 +104,10 @@
                       (above ?cy ?dy)
                       (base-pos ?r ?x ?cy)
                       (not (base-obstacle ?x ?dy)))
-   :effect       (and (not (base-pos ?r ?x ?cy)) (base-pos ?r ?x ?dy)
-                      (not (base-obstacle ?x ?cy)) (base-obstacle ?x ?dy))
+   :effect       (and (not (base-pos ?r ?x ?cy))
+                      (base-pos ?r ?x ?dy)
+                      (not (base-obstacle ?x ?cy))
+                      (base-obstacle ?x ?dy))
    )
 
   ;; Base movement with cart
@@ -109,10 +117,14 @@
    :precondition (and (pushing ?r ?c) (leftof ?x2 ?x1) (leftof ?cx2 ?cx1) 
                       (base-pos ?r ?x1 ?y) (cart-pos ?c ?cx1 ?cy)
                       (not (base-obstacle ?x2 ?y)) (not (base-obstacle ?cx2 ?cy)))
-   :effect       (and (not (base-pos ?r ?x1 ?y)) (base-pos ?r ?x2 ?y)
-                      (not (cart-pos ?c ?cx1 ?cy)) (cart-pos ?c ?cx2 ?cy)
-                      (not (base-obstacle ?x1 ?y)) (base-obstacle ?x2 ?y)
-                      (not (base-obstacle ?cx1 ?cy)) (base-obstacle ?cx2 ?cy)))
+   :effect       (and (not (base-pos ?r ?x1 ?y))
+                      (base-pos ?r ?x2 ?y)
+                      (not (cart-pos ?c ?cx1 ?cy))
+                      (cart-pos ?c ?cx2 ?cy)
+                      (not (base-obstacle ?x1 ?y))
+                      (base-obstacle ?x2 ?y)
+                      (not (base-obstacle ?cx1 ?cy))
+                      (base-obstacle ?cx2 ?cy)))
 
 
 
@@ -121,10 +133,14 @@
    :precondition (and (pushing ?r ?c) (leftof ?x1 ?x2) (leftof ?cx1 ?cx2) 
                       (base-pos ?r ?x1 ?y) (cart-pos ?c ?cx1 ?cy)
                       (not (base-obstacle ?x2 ?y)) (not (base-obstacle ?cx2 ?cy)))
-   :effect       (and (not (base-pos ?r ?x1 ?y)) (base-pos ?r ?x2 ?y)
-                      (not (cart-pos ?c ?cx1 ?cy)) (cart-pos ?c ?cx2 ?cy)
-                      (not (base-obstacle ?x1 ?y)) (base-obstacle ?x2 ?y)
-                      (not (base-obstacle ?cx1 ?cy)) (base-obstacle ?cx2 ?cy)))
+   :effect       (and (not (base-pos ?r ?x1 ?y))
+                      (base-pos ?r ?x2 ?y)
+                      (not (cart-pos ?c ?cx1 ?cy))
+                      (cart-pos ?c ?cx2 ?cy)
+                      (not (base-obstacle ?x1 ?y))
+                      (base-obstacle ?x2 ?y)
+                      (not (base-obstacle ?cx1 ?cy))
+                      (base-obstacle ?cx2 ?cy)))
 
   
   (:action base-cart-up
@@ -132,10 +148,14 @@
    :precondition (and (pushing ?r ?c) (above ?y2 ?y1) (above ?cy2 ?cy1) 
                       (base-pos ?r ?x ?y1) (cart-pos ?c ?cx ?cy1)
                       (not (base-obstacle ?x ?y2)) (not (base-obstacle ?cx ?cy2)))
-   :effect       (and (not (base-pos ?r ?x ?y1)) (base-pos ?r ?x ?y2)
-                      (not (cart-pos ?c ?cx ?cy1)) (cart-pos ?c ?cx ?cy2)
-                      (not (base-obstacle ?x ?y1)) (base-obstacle ?x ?y2)
-                      (not (base-obstacle ?cx ?cy2)) (base-obstacle ?cx ?cy2)))
+   :effect       (and (not (base-pos ?r ?x ?y1))
+                      (base-pos ?r ?x ?y2)
+                      (not (cart-pos ?c ?cx ?cy1))
+                      (cart-pos ?c ?cx ?cy2)
+                      (not (base-obstacle ?x ?y1))
+                      (base-obstacle ?x ?y2)
+                      (not (base-obstacle ?cx ?cy2))
+                      (base-obstacle ?cx ?cy2)))
 
   
   (:action base-cart-down
@@ -143,10 +163,14 @@
    :precondition (and (pushing ?r ?c) (above ?y1 ?y2) (above ?cy1 ?cy2) 
                       (base-pos ?r ?x ?y1) (cart-pos ?c ?cx ?cy1)
                       (not (base-obstacle ?x ?y2)) (not (base-obstacle ?cx ?cy2)))
-   :effect       (and (not (base-pos ?r ?x ?y1)) (base-pos ?r ?x ?y2)
-                      (not (cart-pos ?c ?cx ?cy1)) (cart-pos ?c ?cx ?cy2)
-                      (not (base-obstacle ?x ?y1)) (base-obstacle ?x ?y2)
-                      (not (base-obstacle ?cx ?cy2)) (base-obstacle ?cx ?cy2)))
+   :effect       (and (not (base-pos ?r ?x ?y1))
+                      (base-pos ?r ?x ?y2)
+                      (not (cart-pos ?c ?cx ?cy1))
+                      (cart-pos ?c ?cx ?cy2)
+                      (not (base-obstacle ?x ?y1))
+                      (base-obstacle ?x ?y2)
+                      (not (base-obstacle ?cx ?cy2))
+                      (base-obstacle ?cx ?cy2)))
 
 
 
@@ -164,9 +188,10 @@
                       (sum-x ?basex ?dgxrel ?dgxabs)
                       (sum-y ?basey ?gyrel  ?gyabs)
                       (not (gripper-obstacle ?dgxabs ?gyabs)))
-   :effect       (and (not (gripper-rel ?r ?cgxrel ?gyrel)) (gripper-rel ?r ?dgxrel ?gyrel)
-                      (not (gripper-obstacle ?cgxabs ?gyabs)) (gripper-obstacle ?dgxabs ?gyabs))
-   )
+   :effect       (and (not (gripper-rel ?r ?cgxrel ?gyrel))
+                      (gripper-rel ?r ?dgxrel ?gyrel)
+                      (not (gripper-obstacle ?cgxabs ?gyabs))
+                      (gripper-obstacle ?dgxabs ?gyabs)))
 
   (:action gripper-right
    :parameters (?r - robot ?basex - xc ?basey - yc
@@ -180,8 +205,10 @@
                       (sum-x ?basex ?dgxrel ?dgxabs)
                       (sum-y ?basey ?gyrel  ?gyabs)
                       (not (gripper-obstacle ?dgxabs ?gyabs)))
-   :effect       (and (not (gripper-rel ?r ?cgxrel ?gyrel)) (gripper-rel ?r ?dgxrel ?gyrel)
-                      (not (gripper-obstacle ?cgxabs ?gyabs)) (gripper-obstacle ?dgxabs ?gyabs))
+   :effect       (and (not (gripper-rel ?r ?cgxrel ?gyrel))
+                      (gripper-rel ?r ?dgxrel ?gyrel)
+                      (not (gripper-obstacle ?cgxabs ?gyabs))
+                      (gripper-obstacle ?dgxabs ?gyabs))
    )
 
   (:action gripper-up
@@ -196,8 +223,10 @@
                       (sum-y ?basey ?cgyrel ?cgyabs)
                       (sum-y ?basey ?dgyrel ?dgyabs)
                       (not (gripper-obstacle ?gxabs ?dgyabs)))
-   :effect       (and (not (gripper-rel ?r ?gxrel ?cgyrel)) (gripper-rel ?r ?gxrel ?dgyrel)
-                      (not (gripper-obstacle ?gxabs ?cgyabs)) (gripper-obstacle ?gxabs ?dgyabs))
+   :effect       (and (not (gripper-rel ?r ?gxrel ?cgyrel))
+                      (gripper-rel ?r ?gxrel ?dgyrel)
+                      (not (gripper-obstacle ?gxabs ?cgyabs))
+                      (gripper-obstacle ?gxabs ?dgyabs))
    )
 
   (:action gripper-down
@@ -212,8 +241,10 @@
                       (sum-y ?basey ?cgyrel ?cgyabs)
                       (sum-y ?basey ?dgyrel ?dgyabs)
                       (not (gripper-obstacle ?gxabs ?dgyabs)))
-   :effect       (and (not (gripper-rel ?r ?gxrel ?cgyrel)) (gripper-rel ?r ?gxrel ?dgyrel)
-                      (not (gripper-obstacle ?gxabs ?cgyabs)) (gripper-obstacle ?gxabs ?dgyabs))
+   :effect       (and (not (gripper-rel ?r ?gxrel ?cgyrel))
+                      (gripper-rel ?r ?gxrel ?dgyrel)
+                      (not (gripper-obstacle ?gxabs ?cgyabs))
+                      (gripper-obstacle ?gxabs ?dgyabs))
    )
 
   ;; Cart grasping/ungrasping
@@ -222,7 +253,9 @@
    :precondition (and (not-parked ?r) (not-pushed ?c)
                       (base-pos ?r ?x ?y) (cart-pos ?c ?cx ?y)
                       (leftof ?cx ?x) (not-pushing ?r))
-   :effect       (and (pushing ?r ?c) (not (not-pushing ?r)) (not (not-pushed ?c))))
+   :effect       (and (pushing ?r ?c)
+                      (not (not-pushing ?r))
+                      (not (not-pushed ?c))))
 
 
   (:action grasp-cart-right
@@ -230,26 +263,35 @@
    :precondition (and (not-parked ?r) (not-pushed ?c)
                       (base-pos ?r ?x ?y) (cart-pos ?c ?cx ?y)
                       (leftof ?x ?cx) (not-pushing ?r))
-   :effect       (and (pushing ?r ?c) (not (not-pushing ?r)) (not (not-pushed ?c))))
+   :effect       (and (pushing ?r ?c)
+                      (not (not-pushing ?r))
+                      (not (not-pushed ?c))))
+  
 
   (:action grasp-cart-above
    :parameters (?r - robot ?c - cart ?x - xc ?y - yc ?cy - yc)
    :precondition (and (not-parked ?r) (not-pushed ?c)
                       (base-pos ?r ?x ?y) (cart-pos ?c ?x ?cy)
                       (above ?cy ?y) (not-pushing ?r))
-   :effect       (and (pushing ?r ?c) (not (not-pushing ?r)) (not (not-pushed ?c))))
+   :effect       (and (pushing ?r ?c)
+                      (not (not-pushing ?r))
+                      (not (not-pushed ?c))))
   
   (:action grasp-cart-below
    :parameters (?r - robot ?c - cart ?x - xc ?y - yc ?cy - yc)
    :precondition (and (not-parked ?r) (not-pushed ?c)
                       (base-pos ?r ?x ?y) (cart-pos ?c ?x ?cy)
                       (above ?y ?cy) (not-pushing ?r))
-   :effect       (and (pushing ?r ?c) (not (not-pushing ?r)) (not (not-pushed ?c))))
+   :effect       (and (pushing ?r ?c)
+                      (not (not-pushing ?r))
+                      (not (not-pushed ?c))))
 
   (:action ungrasp-cart
    :parameters (?r - robot ?c - cart )
    :precondition (and (pushing ?r ?c))
-   :effect (and (not (pushing ?r ?c)) (not-pushing ?r) (not-pushed ?c)))
+   :effect       (and (not (pushing ?r ?c))
+                      (not-pushing ?r)
+                      (not-pushed ?c)))
   
   ;; Object manipulation actions
 
@@ -334,7 +376,9 @@
                       (gripper-rel ?r ?gxrel ?gyrel) (sum-x ?x ?gxrel ?cx)
                       (sum-y ?y ?gyrel ?cy) (gripper-empty ?r) (cart-pos ?c ?cx ?cy)
                       (on-cart ?o ?c))
-   :effect       (and (holding ?r ?o) (not (gripper-empty ?r)) (not (on-cart ?o ?c))))
+   :effect       (and (holding ?r ?o)
+                      (not (gripper-empty ?r))
+                      (not (on-cart ?o ?c))))
 
   
   (:action put-left
@@ -429,7 +473,9 @@
                       (sum-x ?x ?gxrel ?cx) (sum-y ?y ?gyrel ?cy) (cart-pos ?c ?cx ?cy)
                       (holding ?r ?o))
 
-   :effect (and (not (holding ?r ?o)) (on-cart ?o ?c) (gripper-empty ?r)))
+   :effect (and (not (holding ?r ?o))
+                (on-cart ?o ?c)
+                (gripper-empty ?r)))
 
   (:action finish-object
    :parameters (?o - object ?x - xc ?y - yc)
