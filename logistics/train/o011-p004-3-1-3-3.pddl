@@ -3,28 +3,18 @@
 
 (define (problem logistics-c1-s3-p3-a3)
 (:domain logistics-strips)
-(:objects a0 a1 a2 
-          c0 
-          t0 
-          l00 l01 l02 
-          p0 p1 p2 
+(:objects a0 a1 a2  - airplane
+        l02 - location
+        l01 - location
+        l00 - airport
+          c0  - city
+          t0  - truck
+          p0 p1 p2  - package
 )
 (:init
-(AIRPLANE a0)
-(AIRPLANE a1)
-(AIRPLANE a2)
-(CITY c0)
-(TRUCK t0)
-(LOCATION l00)
 (in-city  l00 c0)
-(LOCATION l01)
 (in-city  l01 c0)
-(LOCATION l02)
 (in-city  l02 c0)
-(AIRPORT l00)
-(OBJ p0)
-(OBJ p1)
-(OBJ p2)
 (at t0 l01)
 (at p0 l01)
 (at p1 l01)
